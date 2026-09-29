@@ -82,22 +82,32 @@ export const fontConfig: FontConfig = withUserConfig("font", {
 		// ---------------------------------------------------------------------
 		// 2. 中文 / 日文 CJK 字体（悠哉圆体 Yozai Medium，全量简繁中日韩 100% 覆盖）
 		// ---------------------------------------------------------------------
-		{
-			id: "yozai-cjk",
-			family: "Yozai Medium",
-			role: "cjk",
-			source: "local",
-			variants: [
-				{
-					file: "src/assets/fonts/Yozai-Medium.ttf",
-					weight: 500,
-					style: "normal",
-				},
-			],
-			fallback: ["system-ui", "sans-serif"],
-			display: "swap",
-			preload: false,
-		},
+{
+    id: "source-han-sans-sc",
+    family: "Source Han Sans SC",
+    role: "cjk",
+    source: "local",
+    variants: [
+        {
+            file: "src/assets/fonts/SourceHanSansSC-Regular.otf",
+            weight: 400,
+            style: "normal",
+        },
+        {
+            file: "src/assets/fonts/SourceHanSansSC-Medium.otf",
+            weight: 500,
+            style: "normal",
+        },
+        {
+            file: "src/assets/fonts/SourceHanSansSC-Bold.otf",
+            weight: 700,
+            style: "normal",
+        },
+    ],
+    fallback: ["system-ui", "sans-serif"],
+    display: "swap",
+    preload: false,
+},
 
 		// ---------------------------------------------------------------------
 		// 3. 代码等宽字体（渲染代码块与终端文本，对应 CSS 变量 --font-mono）
