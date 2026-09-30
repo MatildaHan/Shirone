@@ -38,9 +38,9 @@ export interface CompassShelf {
 export const compassData: CompassShelf[] = [
 	{
 		key: "dev",
-		name: "Development",
+		name: "开发资源",
 		icon: "material-symbols:code-rounded",
-		blurb: "Sites I keep open while writing code",
+		blurb: "编写代码时常用的参考站点",
 		entries: [
 			{
 				label: "GitHub",
@@ -63,9 +63,9 @@ export const compassData: CompassShelf[] = [
 	},
 	{
 		key: "design",
-		name: "Design",
+		name: "设计灵感",
 		icon: "material-symbols:palette-outline-rounded",
-		blurb: "Colors, icons and inspiration",
+		blurb: "配色、图标与创作灵感",
 		entries: [
 			{
 				label: "Iconify",
@@ -87,7 +87,7 @@ export const compassData: CompassShelf[] = [
 	},
 	{
 		key: "tools",
-		name: "Tools",
+		name: "实用工具",
 		icon: "material-symbols:build-outline-rounded",
 		entries: [
 			{
@@ -104,7 +104,7 @@ export const compassData: CompassShelf[] = [
 	},
 	{
 		key: "reads",
-		name: "Reading",
+		name: "阅读收藏",
 		icon: "material-symbols:auto-stories-outline-rounded",
 		entries: [
 			{ label: "Hacker News", href: "https://news.ycombinator.com" },

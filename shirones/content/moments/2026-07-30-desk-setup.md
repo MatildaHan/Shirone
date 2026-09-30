@@ -1,20 +1,10 @@
 ---
 published: 2026-07-30T14:20:00+08:00
 mood: material-symbols:desktop-windows-outline-rounded
-tags:
-  - life
-  - wallpaper
+tags: ["原神", "雷电将军", "壁纸"]
 images:
-  - src: /images/moments/scenery/scene-1.webp
-    alt: Anime scenery wallpaper one
-  - src: /images/moments/scenery/scene-2.webp
-    alt: Anime scenery wallpaper two
-  - src: /images/moments/scenery/scene-3.webp
-    alt: Anime scenery wallpaper three
-  - src: /images/moments/scenery/scene-4.webp
-    alt: Anime scenery wallpaper four
+  - src: /assets/raiden/sakura.webp
+    alt: "樱花树下的雷电将军与书卷、小鸟"
 ---
 
-Picked up a set of anime scenery wallpapers — mountains, sea, sky, each with its own palette.
-
-I rotate them as my desktop, one every few days. Cheaper joy than a new mousepad.
+樱下这幅雷电将军插画很适合慢慢看。浅粉的花与深紫的发色相互映衬，手边的书和小鸟让画面多了一点轻盈。把这样的片刻留在页面里，读到疲惫时抬一抬眼，也像在树影下借到了一小段休息。

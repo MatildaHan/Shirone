@@ -1,185 +1,30 @@
 ---
-title: Shirone Markdown Enhancements
+title: "稻妻城的灯火，替夜色留下温度"
 published: 2026-08-19
 pinned: true
-description: Explore Shirone's custom Markdown extensions, expressive components, and authoring syntax.
-tags: [Demo, Markdown, Extensions, Theme, Shirone]
+description: "从神樱树下走向街巷，在一盏盏灯里读见日常的分量。"
+tags: ["原神", "稻妻", "风景", "随笔"]
 series: markdown-syntax-guide
 seriesOrder: 3
-category: Guides
-lang: en
+category: "稻妻漫游"
+lang: "zh-CN"
 draft: false
 ---
 
-Shirone provides a collection of theme-exclusive Markdown extensions and custom syntax containers. Built on top of our native unified AST processing pipeline, all extensions render into accessible, semantic HTML during site build time with **zero client JavaScript hydration overhead** and **100% M3E design token alignment**.
+## 当轮廓慢慢退后
 
-## File Trees
+夜色降下来时，稻妻城在想象中换了一种表情。白日里醒目的屋檐退成深浅不一的剪影，远处的建筑不再需要看得分明。反而是近处的一点暖光，先把人的目光接住。灯照到的地方不大，却足以让街角与门前拥有各自的名字。
 
-File Trees turn multi-level project structures, source hierarchies, and terminal directory outputs into compact, interactive tree views with automatic extension icons, diff highlighting, and collapsible branches.
+我喜欢画面里的冷暖相遇。天空越深，窗纸上的光就越显得柔和；街道越安静，一处细微的响动就越容易被听见。夜晚没有抹去城市，只是重新安排了我们注意事物的顺序，让容易被白日忽略的部分走到前面。
 
-### 1. Nested List Syntax (`:::file-tree`)
+## 普通日子的重量
 
-Use the `:::file-tree` block directive when writing the file hierarchy directly as a Markdown nested list.
+谈到稻妻，雷光与永恒总是很鲜明。但若把视线放低，街巷里的日常同样值得一页文字。我会想象有人在门口收起物件，有人为晚归的人留灯，也有人只是站在窗边看天气。这些都是随景色生出的联想，却能让一座宏大的城市变得亲近。
 
-```markdown
-:::file-tree{title="Shirone source tree"}
-- src
-  - components/
-    - ++ Navigation.svelte # added component
-    - -- Button.astro # removed component
-  - content
-    - posts/
-      - markdown-enhancements.md
-  - layouts/
-    - PostLayout.astro
-  - plugins
-    - markdown/
-      - rehype-file-tree.mjs
-  - styles
-    - markdown/
-      - trees.css
-  - **content.config.ts** # important file
-- public/
-  - favicon.svg
-- package.json
-:::
-```
+正是这种亲近，使远处的庄严有了可以衡量的重量。再大的愿景，也需要落在一扇会被打开的门、一段可以平安走过的路上。灯光不解释什么大道理，它照亮眼前的一小片地方，就已经完成了自己的事情。
 
-:::file-tree{title="Shirone source tree"}
-- src
-  - components/
-    - ++ Navigation.svelte # added component
-    - -- Button.astro # removed component
-  - content
-    - posts/
-      - markdown-enhancements.md
-  - layouts/
-    - PostLayout.astro
-  - plugins
-    - markdown/
-      - rehype-file-tree.mjs
-  - styles
-    - markdown/
-      - trees.css
-  - **content.config.ts** # important file
-- public/
-  - favicon.svg
-- package.json
-:::
+## 漫游暂告一段落
 
-#### Authoring Rules & Markers
+从[离岛的海风](/posts/markdown/)到[神樱的树影](/posts/markdown-extended/)，再到稻妻城的夜色，这段漫游没有画出完整的地图，只选择了三种停留的姿势：迎接、仰望、靠近。景色的价值，也许就在这些小小的改变里。
 
-- **Diff States**: Prefix an item with `++` (green background & badge) or `--` (red background & strikethrough) to highlight changes.
-- **Comments**: Any text following a `#` is rendered as a muted, right-aligned inline comment.
-- **Emphasis**: Wrap names in `**bold**` to give key files prominent visual weight.
-- **Collapsible Folders**: Directories inferred from nested list items start expanded by default. Add a trailing slash (e.g. `components/`) to create a collapsed directory that readers can expand on click or via keyboard navigation.
-
----
-
-### 2. Terminal Output Syntax (```` ```file-tree ````)
-
-When you already have directory tree text generated from command-line tools like `tree`, paste it directly into a `file-tree` fenced code block. Both Unicode branch characters (`├──`, `└──`, `│`) and ASCII branches are automatically parsed.
-
-````markdown
-```file-tree title="Build output" icon="simple"
-dist
-├── _astro/
-│   ├── index.css
-│   └── page.js
-└── favicon.ico
-```
-````
-
-```file-tree title="Build output" icon="simple"
-dist
-├── _astro/
-│   ├── index.css
-│   └── page.js
-└── favicon.ico
-```
-
-#### Configuration Options
-
-- `title="string"`: Sets a custom header title and accessible label for the tree.
-- `icon="colored" | "simple"`: Choose between multi-color extension icons (`colored`, default) or minimal monochrome icons (`simple`).
-
----
-
-## Code Trees
-
-Interactive Code Trees pair a multi-level file hierarchy navigation pane on the left with instant code panel switching on the right. They provide an IDE-like reading experience for multi-file examples, modules, or whole directory walk-throughs.
-
-### 1. Container Syntax (`:::code-tree`)
-
-Combine multiple fenced code blocks within a `:::code-tree` block directive. Each code block specifies its path via `title="path/to/file"`.
-
-````markdown
-:::code-tree{title="Shirone Component Demo" height="380px" entry="src/Button.svelte"}
-```svelte title="src/Button.svelte"
-<script lang="ts">
-  let { label = "Click me" } = $props();
-</script>
-
-<button class="m3-btn">{label}</button>
-```
-
-```stylus title="src/styles/button.styl"
-.m3-btn
-  background: var(--primary)
-  color: var(--on-primary)
-  border-radius: var(--shape-corner-m)
-```
-
-```json title="package.json"
-{
-  "name": "button-demo",
-  "version": "1.0.0"
-}
-```
-:::
-````
-
-:::code-tree{title="Shirone Component Demo" height="380px" entry="src/Button.svelte"}
-```svelte title="src/Button.svelte"
-<script lang="ts">
-  let { label = "Click me" } = $props();
-</script>
-
-<button class="m3-btn">{label}</button>
-```
-
-```stylus title="src/styles/button.styl"
-.m3-btn
-  background: var(--primary)
-  color: var(--on-primary)
-  border-radius: var(--shape-corner-m)
-```
-
-```json title="package.json"
-{
-  "name": "button-demo",
-  "version": "1.0.0"
-}
-```
-:::
-
-#### Configuration & Markers
-
-- `title="string"`: Sets the header title and accessible label for the code tree.
-- `height="string"`: Sets the height for the desktop view (default `420px`, e.g. `380px`, `26rem`).
-- `entry="filepath"`: Specifies which file is active upon first load.
-- `icon="colored" | "simple"`: Switch between colorful or minimal monochrome file icons.
-- `:active`: Place `:active` on any fenced code block to designate it as the default active tab.
-
----
-
-### 2. Local Directory Auto-Import (`@[code-tree]`)
-
-Point directly to any local directory path in the workspace to automatically scan and generate an interactive code tree at build time without manually copying file contents.
-
-```markdown
-@[code-tree title="Anime Utilities" entry="status.ts"](/src/utils/anime)
-```
-
-@[code-tree title="Site Configuration" entry="siteConfig.ts"](/shirones/config)
-
+这一晚的文字到这里就好。让余下的街道留在页外，让灯继续亮着。旅行不必把每一处空白填满，才算认真经过。

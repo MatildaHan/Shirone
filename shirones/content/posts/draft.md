@@ -1,22 +1,27 @@
 ---
-title: Draft Example
+title: "尚未写完的梦，先停在一阵海风里"
 published: 2022-07-01
-tags: [Markdown, Blogging, Demo]
-category: Examples
+tags: ["原神", "旅途", "随笔"]
+category: "旅途拾光"
 draft: true
+description: "一篇仍留在草稿中的提瓦特旅行想象，给未成形的文字一些时间。"
+lang: "zh-CN"
 ---
 
-# This Article is a Draft
+## 梦的入口
 
-This article is currently in a draft state and is not published. Therefore, it will not be visible to the general audience. The content is still a work in progress and may require further editing and review.
+这篇尚未完成的短文，准备从一阵海风开始。梦里的提瓦特没有清楚的边界，岛屿的轮廓与天空慢慢相接，光线落在水面上，又被细小的波纹分开。旅行者还没看清远处的建筑，先听见风掠过衣角，像有人翻动了一页很轻的纸。
 
-When the article is ready for publication, you can update the "draft" field to "false" in the Frontmatter:
+我想让梦保留一点朦胧。路从哪里开始，究竟准备走向何处，都可以晚一点再回答。此刻只需要一个愿意停下来观察的人，以及一片尚未被命名的颜色。故事若急着解释所有来由，梦里的空气便容易散掉。
 
-```markdown
----
-title: Draft Example
-published: 2024-01-11T04:40:26.381Z
-tags: [Markdown, Blogging, Demo]
-category: Examples
-draft: false
----
+## 一点紫色
+
+远处或许可以出现一缕紫色，让人自然想起雷电将军。它可以来自花，也可以只是云影与日光相遇的结果。这里还没有决定如何写下去，只先保存这种被颜色轻轻牵住目光的感觉，等待下一次落笔时再靠近。
+
+草稿的好处正在于此：文字可以暂时不承担完整的责任。一个段落还没有找到合适的位置，一种情绪也尚未得到准确的名字，都能够先安静地留下。只要继续诚实地观看，迟早会知道哪些部分值得保留。
+
+## 暂时合上
+
+梦里的海风仍在继续，纸上的句子先到这里。下一次回来，也许会删掉一些过重的词，给景色腾出更大的空间；也许会从一处很小的细节出发，找到真正想写的方向。未完成并不着急成为遗憾。
+
+把这一页留作草稿，是想让写作与旅行一样，都允许中途停顿。等心绪准备好，再把远处的轮廓看清一些。此刻只记住海风的轻，以及一段故事尚有可能展开的余地。

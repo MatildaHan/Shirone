@@ -1,14 +1,10 @@
 ---
 published: 2026-08-08T23:40:00+08:00
-mood: material-symbols:code-blocks-outline-rounded
-tags:
-  - dev
-  - daily
+mood: material-symbols:auto-awesome-outline-rounded
+tags: ["原神", "稻妻", "随笔"]
 images:
-  - src: /images/moments/night/window-sun.webp
-    alt: A girl by a sunlit window, the room dark around her
+  - src: /assets/raiden/quiet.webp
+    alt: "日光与紫色衣袂相映的雷电将军主题插画"
 ---
 
-Switched to a new wallpaper — a girl by a sunlit window, the room dark except for her.
-
-Coding past midnight, the screen light and the wallpaper light make quite a pair. Today's lesson: don't put side effects inside Svelte 5's `$derived`, or state updates become magic. Note to self, before I trip again.
+想给稻妻的雨夜留几行字：先听远雷，再听屋檐滴水，最后把没有写完的句子放回纸上。这样的夜色来自风景引出的想象，安静得可以容纳一次长长的停顿。故事还很远，眼前的一点灯光也值得被记住。

@@ -43,7 +43,7 @@ pnpm dev
 | `src/assets/` | 源资源，例如字体；图片能否经过构建优化取决于使用方式 |
 | `src/content.config.ts` | 内容集合接入及本地转换，目前统一覆盖文章封面 |
 | `public/` | 原样发布的静态文件；例如 `/assets/raiden/sakura.webp` 对应此目录下文件 |
-| `astro.config.mjs` | 主题集成与显式组件覆盖，目前注册本地 `MainGridLayout` |
+| `astro.config.mjs` | 主题集成与显式组件覆盖，目前注册本地 `MainGridLayout` 与中文标记版 `TimelineCard` |
 | `tsconfig.json` | 类型配置；现有 `@/`、`@components/` 等别名指向主题依赖内部 |
 
 `dist/` 是构建输出，`.astro/` 和 `.shirones/` 是生成类型与集成缓存，`node_modules/` 是安装的依赖。这些目录不是日常修改入口，不提交其生成文件；其他生成目录以 `.gitignore` 为准。

@@ -1,23 +1,29 @@
 ---
-title: "Markdown File Includes"
+title: "给旅途留一句话"
 published: 2026-08-28
-description: "Build-time Markdown file and slice includes."
-tags: [Markdown, Shirone]
-category: Guides
+description: "一段可以反复读的小小寄语，写给路上仍在观察的人。"
+tags: ["原神", "稻妻", "旅途", "随笔"]
+category: "旅途拾光"
 draft: false
+lang: "zh-CN"
 ---
 
-Shirone can include a local Markdown file or a safe slice of one.
+## 从短句开始
 
-<!-- @include: shirones/content/snippets/include-example.md#public-api -->
+提瓦特的景色很辽阔，有时却只需要一句短话，就能把观看时的心情留下。我喜欢在长文章之间放进这样的片段：不解释完整的来由，也不催促读者理解，只像路旁一个可以暂时坐下的位置，把注意力还给眼前。
 
-The full file and line-range forms are also supported:
+这一页收着一小段写给稻妻旅途的寄语。它是这里的原创文字，由雷光、花影和灯火这些反复萦绕的意象写成。可以把它读作一封很短的信，也可以只挑出其中一个画面，带进自己的想象里。
 
-```markdown
 <!-- @include: shirones/content/snippets/include-example.md -->
-<!-- @include: shirones/content/snippets/include-example.md{1-4} -->
-<!-- @include: shirones/content/snippets/include-example.md{5-} -->
-<!-- @include: shirones/content/snippets/include-example.md{-4} -->
-```
 
-Include comments inside fenced code remain literal.
+## 为停顿留出地方
+
+写短句时，删去的部分和留下的部分一样重要。若把每一个意思都解释到底，读者便没有空间与文字相遇。留下一点空白，一场雨可以通向不同的记忆，一盏灯也可以让不同的人想起各自的归处。
+
+我想到雷电将军时，常有许多无法立即理清的感受：喜欢她的坚定，也喜欢插画里偶尔出现的宁静。把这些全部装进一句话容易显得拥挤，于是只先写下看见的颜色与光。其余的部分，可以等到下一篇再慢慢靠近。
+
+## 路还很长
+
+旅途里的寄语，最适合轻轻带着。它无需成为一条要求人遵守的准则，只在匆忙时提醒：还有一小段风景，值得把步子放慢。读者若在自己的日常里遇见相似的片刻，文字便与那一刻有了新的联系。
+
+这一页读完，可以去看[动态](/moments/)里的短章，也可以回到[首页](/)随意挑一篇。每次进入故事的方向都可以不同，只愿那些细小的喜欢，在继续赶路时仍有地方安放。

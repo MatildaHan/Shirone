@@ -1,28 +1,29 @@
 ---
-title: "Audio Reader: Japanese Anime Mystery Voices"
+title: "把声音留给安静"
 published: 2026-08-29
-description: A small collection of mysterious Japanese anime voice fragments, played on demand with Audio Reader.
-tags: [Example, Audio Reader]
+description: "想象一段稻妻雨声，听见喧响退去后仍然存在的世界。"
+tags: ["原神", "雷电将军", "稻妻", "随笔"]
 series: media-embeds
 seriesOrder: 2
-category: Examples
+category: "角色随笔"
 draft: false
+lang: "zh-CN"
 ---
 
-These short Japanese voice fragments feel as though they were picked up from the edge of an anime scene: a teasing call, a bright greeting, a tiny laugh, and a few lines with no clear origin. They are mood samples rather than dialogue transcripts, so let the sound carry the meaning.
+## 先听远处
 
-Audio Reader keeps them quiet until you choose to listen. Each speaker button loads and plays its clip only after it is pressed.
+如果为一页稻妻随笔安排声音，我想先放进一阵远雷，再留出足够长的空隙。雷声不必逼近，它只需要让人意识到天空仍在很远的地方。接下来才是雨点、风和衣角轻微的摩擦，让辽阔与细小轮流占据耳朵。
 
-```markdown
-:audio-reader[Clip title]{src="/assets/audio/filename.wav"}
-```
+这是一段由场景生出的声音想象，并不是对游戏曲目的记录。写它时，我会想到雷电将军身上那种安静的力量。力量可以使场面变得热烈，也可以让喧哗停下来；而停下来之后，我们才发现周围还有许多声音，从前只是没有认真听。
 
-## The fragments
+## 沉默并不空无
 
-- **Baka**: :audio-reader[バカ]{src="/assets/audio/Baka.wav"}
-- **Ciallo**: :audio-reader[Ciallo！！]{src="/assets/audio/Ciallo.wav"}
-- **Ehe**: :audio-reader[A joking sense]{src="/assets/audio/Ehe.wav"}
-- **Imoi**: :audio-reader[イモい]{src="/assets/audio/Imoi.wav"}
-- **Zako**: :audio-reader[雑魚じゃん、雑魚雑魚]{src="/assets/audio/Zako.wav"}
+雨落在屋檐与石阶上，应该有不同的轻重。风穿过枝叶，也不会每一次都发出相同的响动。若把这些细节分开听，一段看似平静的时间，其实一直在变化。安静并不意味着什么都没有发生，只是变化不再以惊人的方式到来。
 
-`src` must use a site-root path or an HTTPS URL, and the directive label cannot be empty. Invalid or incomplete directives remain ordinary Markdown and do not load Audio Reader resources.
+我喜欢这样的联想，因为它让“永恒”与日常之间多了一条柔软的路。即使愿望指向长久，眼前仍然有每一滴雨不同的落点。记住一个片刻，不必要求下一刻完全相同；有些珍惜，恰好来自愿意让事物按自己的节奏继续。
+
+## 合上这一页
+
+[雷光之后的留白](/posts/video/)写的是看见，这一页写的是倾听。两篇文字没有为角色作出完整的解释，只留下两种靠近的方式。画面给予第一眼的震动，安静则把理解的时间还给观看的人。
+
+若窗外恰好也有雨，可以在读完后停一会儿。无需寻找与稻妻完全一致的声音，只听属于此刻的那一段。旅途在纸上告一段落，耳边的世界仍会继续。

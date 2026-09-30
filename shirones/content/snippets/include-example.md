@@ -1,13 +1,1 @@
-## Included API
-
-This paragraph is expanded from a neighboring Markdown file.
-
-<!-- #region public-api -->
-```ts
-export function greet(name: string) {
-  return `Hello, ${name}`;
-}
-```
-<!-- #endregion public-api -->
-
-This line is outside the named region.
+> 愿你经过稻妻时，记得抬头看看花，也记得给夜色里的一盏灯留一点目光。雷声会远去，风仍然会从枝间走过。若有一刻让你愿意放慢脚步，就把那一刻轻轻带上；等回到平常的日子，再慢慢想起它的颜色。

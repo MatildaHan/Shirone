@@ -1,125 +1,31 @@
 ---
-title: Markdown Extended Features
+title: "神樱下的慢时光"
 published: 2024-05-01
 updated: 2024-11-29
-description: 'Read more about Markdown features in Fuwari'
-image: ''
-tags: [Demo, Example, Markdown, Fuwari]
+description: "把目光留给鸣神大社的树影，也留给花落之前短暂的停顿。"
+image: "/assets/raiden/quiet.webp"
+tags: ["原神", "稻妻", "鸣神大社", "神樱", "风景"]
 series: markdown-syntax-guide
 seriesOrder: 2
-draft: false 
+draft: false
+category: "稻妻漫游"
+lang: "zh-CN"
 ---
 
-## GitHub Repository Cards
-You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API. 
+## 仰望一棵树
 
-::github{repo="Fabrizz/MMM-OnSpotify"}
+想到鸣神大社，我最先想到神樱。枝条向空中展开，花的颜色把严整的建筑边缘染得柔和。站在这样的场景前，目光总会不自觉地向上：先看树的整体，再看交错的细枝，最后停在一小簇并不起眼的花上。仰望让时间有了另一种走法。
 
-Create a GitHub repository card with the code `::github{repo="<owner>/<repo>"}`.
+树冠很大，一片花瓣却很轻。这种大小之间的差别，让“长久”不再只是抽象的词。我们很难想象漫长岁月究竟有多远，却能理解一片花从枝头落到地面需要多久。远与近，被同一阵风轻轻连在一起，谁也不必取代谁。
 
-```markdown
-::github{repo="saicaca/fuwari"}
-```
+## 把脚步放轻
 
-## Mermaid Diagrams
+关于神樱，可以谈许多故事。这篇随笔只想留在眼前的画面里，不急着走进复杂的来历。石阶、栏杆、花影，以及树下可以容纳一段安静的空地，已经足够组成一页值得读的风景。知道得少一点的时刻，也可以看得很认真。
 
-Fenced `mermaid` blocks are rendered as diagrams and follow the active color scheme.
+我会想象旅行者在树下收起地图，暂时不辨认下一个方向。阳光越过枝叶，衣袖上的明暗缓慢移动；远处的声音传来，又被风吹散。短暂的停留没有改变什么大事，却让原本散乱的心绪找到了一处可以落脚的地方。
 
-```mermaid
-flowchart LR
-    accTitle: Markdown rendering pipeline
-    accDescr: Markdown source is transformed into semantic HTML and then enhanced as a themed SVG diagram.
-    A[Markdown source] --> B[Astro content pipeline]
-    B --> C[Semantic HTML]
-    C --> D[Themed diagram]
-```
+## 花落之后
 
-## Admonitions
+花不会为了被记住而停止飘落。恰恰是这样的轻与易逝，让人想多看一会儿。对我而言，神樱的美也在这里：辽阔的树影容得下很小的一次告别，而告别之后，视线依然可以温柔地向前。
 
-Following types of admonitions are supported: `note` `tip` `important` `warning` `caution`
-
-:::note
-Highlights information that users should take into account, even when skimming.
-:::
-
-:::tip
-Optional information to help a user be more successful.
-:::
-
-:::important
-Crucial information necessary for users to succeed.
-:::
-
-:::warning
-Critical content demanding immediate user attention due to potential risks.
-:::
-
-:::caution
-Negative potential consequences of an action.
-:::
-
-### Basic Syntax
-
-```markdown
-:::note
-Highlights information that users should take into account, even when skimming.
-:::
-
-:::tip
-Optional information to help a user be more successful.
-:::
-```
-
-### Custom Titles
-
-The title of the admonition can be customized.
-
-:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-
-```markdown
-:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-```
-
-### GitHub Syntax
-
-> [!TIP]
-> [The GitHub syntax](https://github.com/orgs/community/discussions/16925) is also supported.
-
-```
-> [!NOTE]
-> The GitHub syntax is also supported.
-
-> [!TIP]
-> The GitHub syntax is also supported.
-```
-
-### Spoiler
-
-You can add spoilers to your text. The text also supports **Markdown** syntax.
-
-The content :spoiler[is hidden **ayyy**]!
-
-```markdown
-The content :spoiler[is hidden **ayyy**]!
-
-```
-
-## Image Widths and Captions
-
-A standalone image accepts an optional `w-N%` width token in its alt text and a Markdown title rendered as a centered caption below the image:
-
-![Album example image w-50%](/images/albums/AcgExample/07.webp "Half-width image with a caption")
-
-```markdown
-![Image description w-50%](./image.webp "Visible caption")
-```
-
-Valid widths range from `w-1%` to `w-100%`; invalid tokens stay in the alt text. The width and the caption are independent — a title alone also produces a caption:
-
-![Album example image w-75%](/images/albums/AcgExample/08.webp)
-
-![Album example image](/images/albums/AcgExample/09.webp "Caption without a width token")
+下山时，把这份安静带进城市。接下来的一页是[稻妻城的灯火](/posts/markdown-enhancements/)，那里有另一种与时间相处的方式。

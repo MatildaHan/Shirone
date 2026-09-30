@@ -1,70 +1,27 @@
 ---
-title: Markdown Admonitions
+title: "远望天守阁，保留一点距离"
 published: 2026-08-27
-description: Present notes, warnings, and optional details with Shirone's M3E Markdown containers.
-tags: [Demo, Markdown, Admonition, Shirone]
-category: Guides
-lang: en
+description: "在稻妻的高低轮廓之间，想一想仰望与理解并不相同的步速。"
+tags: ["原神", "雷电将军", "稻妻", "风景"]
+category: "角色随笔"
+lang: "zh-CN"
 draft: false
 ---
 
-Admonitions keep supporting information visually distinct while preserving the article's reading flow. Every form is rendered on the server and uses the same compact M3E component.
+## 先看见轮廓
 
-## Semantic variants
+一座城里，总有一些建筑会先于街道进入记忆。想到稻妻，天守阁的轮廓便有这样的存在感。它不需要在每一页风景里占据中央，只要远处仍能望见，人就会自然地意识到城市的高低、方向，以及某种不容易忽略的庄严。
 
-::: note Deployment context
-The spaced form accepts a plain custom title while remaining compatible with the reference syntax.
-:::
+远望时，细节被距离收起。看不清的部分反而留出一种完整的印象：屋檐的层次、天空的颜色、建筑与云之间的空隙。这样的观看带着敬意，也带着未能触及的陌生。我喜欢承认这份陌生，而不是急着用一句话把它解释清楚。
 
-:::info
-Use information blocks for neutral context that helps readers understand the surrounding section.
-:::
+## 仰望之后
 
-:::tip[Existing **label** syntax]
-The original bracket label remains available and can contain inline Markdown emphasis.
-:::
+雷电将军与稻妻之间的联系，让这处轮廓不只是一幅建筑画面。它也承载着观者对角色的想象。越是鲜明的形象，越容易让人以为第一眼已经足够；可真正使喜欢变得长久的，往往是愿意回来再看一次，而不是把第一次的判断保存到底。
 
-> [!IMPORTANT]
-> GitHub Alert syntax enters the same renderer, so existing articles keep one visual language.
+我会在想象中把视线从远处移回脚边。石阶上的光斑、路边的一点绿意、天空里缓慢变化的云，都与那座庄严的建筑处在同一个世界。高处并没有使近处失去意义，近处的细节也不会削弱远处的力量。它们共同完成了稻妻的景深。
 
-:::warning
-Check environment variables before running a production build.
-:::
+## 不必立刻走近
 
-:::caution
-Do not publish credentials, local configuration, or private keys with an example.
-:::
+有时，保留距离能让观看更从容。不把遥远误认作冷漠，也不把亲近想成彻底了解；只承认此刻站在这里，能够看见这些，仍有一些尚未看见。这样的分寸，是我愿意带进角色随笔里的东西。
 
-## Optional details
-
-::: details Inspect the complete command
-The disclosure uses native browser semantics and remains keyboard accessible without client JavaScript.
-
-```powershell
-npx.cmd astro check
-pnpm.cmd build
-```
-
-- It starts closed.
-- Long code can scroll inside its own code block.
-- The container remains within the article width on narrow screens.
-:::
-
-## Author syntax
-
-```markdown
-:::note[Existing title syntax]
-Content
-:::
-
-::: warning Plume-compatible title syntax
-Content
-:::
-
-> [!TIP]
-> GitHub Alert syntax
-
-::: details Optional content
-Hidden until the reader opens it.
-:::
-```
+等暮色慢慢落下，轮廓会变得更深。路仍在脚下延伸，而目光已经带走了一份沉静。下次再抬头，也许同一座天守阁会留下不同的印象。

@@ -17,7 +17,7 @@ export const timelineData: TimelineItem[] = [
 			"Added multi-page capabilities: Timeline, Skills, Projects, and Protected Albums",
 			"Zero-error strict type-checking and automated visual regression locks",
 		],
-		tags: ["Astro", "Svelte 5", "M3E", "Tailwind 4"],
+		tags: ["静态站点", "界面组件", "界面设计", "样式工具"],
 		links: [
 			{
 				label: "GitHub Repository",
@@ -40,7 +40,7 @@ export const timelineData: TimelineItem[] = [
 			"Spearheaded design system unification across web products",
 			"Reduced core bundle load times by 40% using modern SSR and asset pipelines",
 		],
-		tags: ["TypeScript", "Architecture", "Performance", "Design System"],
+		tags: ["类型检查", "架构设计", "性能优化", "设计系统"],
 		icon: "material-symbols:work-rounded",
 		featured: true,
 	},
@@ -55,7 +55,7 @@ export const timelineData: TimelineItem[] = [
 			"Designed intuitive fluid canvas interface with low-latency interaction",
 			"Built serverless backend APIs with edge caching and relational persistence",
 		],
-		tags: ["Svelte", "Node.js", "PostgreSQL", "Cloudflare"],
+		tags: ["界面组件", "服务开发", "关系数据库", "边缘网络"],
 		icon: "material-symbols:deployed-code-outline-rounded",
 	},
 	{
@@ -70,7 +70,7 @@ export const timelineData: TimelineItem[] = [
 			"Graduated with honors and outstanding graduate thesis award",
 			"Led university open source student community and hackathons",
 		],
-		tags: ["Computer Science", "Algorithms", "Software Engineering"],
+		tags: ["计算机科学", "算法", "软件工程"],
 		icon: "material-symbols:school-rounded",
 	},
 	{
@@ -80,7 +80,7 @@ export const timelineData: TimelineItem[] = [
 		subtitle: "First Step into Tech Writing",
 		description:
 			"Published my first article online and began documenting frontend exploration, creative coding, and personal reflections.",
-		tags: ["Blogging", "Writing", "Open Web"],
+		tags: ["博客", "写作", "开放网络"],
 		icon: "material-symbols:edit-note-rounded",
 	},
 ];

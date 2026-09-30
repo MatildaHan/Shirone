@@ -1,115 +1,27 @@
 ---
-title: Markdown Option Groups
+title: "在稻妻的路口，选择今日的风"
 published: 2026-08-28
-description: Present related Markdown alternatives in compact, synchronized M3E option groups.
-tags: [Demo, Markdown, Tabs, Shirone]
-category: Guides
-lang: en
+description: "关于走向何处的一页轻随笔，把决定留给当下的心情。"
+tags: ["原神", "稻妻", "旅途", "随笔"]
+category: "稻妻漫游"
+lang: "zh-CN"
 draft: false
 ---
 
-Option groups keep equivalent instructions together without repeating the surrounding explanation. Each option accepts full block Markdown, while the selected value can synchronize with another group on the same page.
+## 两条路都在延伸
 
-## Choose a package manager
+想象站在稻妻的一处路口，一边朝向有树影的山间，一边通往渐渐热闹的街巷。地图可以给出方向，却不能替此刻的心情做决定。于是旅行者先停一会儿，看看云从哪里来，听听近处有什么声音，再决定把今天的目光交给哪一边。
 
-Use `@tab:active` to select the initial option. A suffix after `#` supplies a stable value without changing the visible title.
+选择的有趣之处，在于它常常很具体。想看开阔的天空，就向高处走；想靠近一点日常，就留在灯与门窗之间。每条路都会带来某些景色，也会让另一些景色暂时留在远处。这份有限使一段旅途拥有了自己的轮廓。
 
-::: tabs#package-manager
+## 今天愿意看见什么
 
-@tab npm
+有些时候，我想把文字写得像雷光，短而鲜明；另一些时候，又想像树影那样慢慢铺开。两种心情都能在稻妻找到相应的画面。喜欢的地方因此像一位宽容的读者，容得下同一个人不同时刻的语气。
 
-Install the package with npm:
+想到雷电将军，也未必每次都要谈最宏大的词。可以写她的配色，可以看一幅安静的插画，也可以从角色退后一点，写写与她相关的风景。目光有了转动的余地，喜欢才会不断生出新的细节，而不是只重复第一眼的印象。
 
-```powershell
-npm install astro
-```
+## 留一条路给以后
 
-@tab:active **pnpm**#pnpm
+路口不要求把所有方向一次走完。今天向山间去，街巷便留给另一个傍晚；今天先看灯火，树下的空地也不会因为等待而失去意义。旅行的余地，就藏在这些尚未完成的小小选择里。
 
-Install the package with pnpm:
-
-```powershell
-pnpm.cmd add astro
-```
-
-@tab Bun#bun
-
-Install the package with Bun:
-
-```powershell
-bun add astro
-```
-
-:::
-
-## Run the project
-
-This group shares the `package-manager` id. Selecting an option above updates the matching command below and remembers that choice for the next visit.
-
-::: tabs#package-manager
-
-@tab npm
-
-```powershell
-npm run dev
-```
-
-@tab pnpm
-
-```powershell
-pnpm.cmd dev
-```
-
-@tab Bun#bun
-
-```powershell
-bun run dev
-```
-
-:::
-
-## Many alternatives
-
-Longer option rows remain on one line and scroll within their own navigation area on narrow screens.
-
-::: tabs
-
-@tab Local workstation
-
-Use the local toolchain while developing a feature.
-
-@tab Hosted preview environment
-
-Publish a temporary preview for review.
-
-@tab Continuous integration
-
-Run deterministic validation for every change.
-
-@tab Production deployment
-
-Promote a verified artifact to production.
-
-@tab Offline recovery workflow
-
-Restore from a local artifact when the network is unavailable.
-
-:::
-
-## Author syntax
-
-````markdown
-::: tabs#package-manager
-
-@tab npm
-
-Use npm instructions here.
-
-@tab:active **pnpm**#pnpm
-
-Use pnpm instructions here.
-
-:::
-````
-
-Each group needs at least two `@tab` sections, and every section needs body content separated from its marker by a blank line. Invalid or incomplete groups remain readable as ordinary Markdown.
+因此，这一页只作出一个很轻的决定：听听今日的风，再往前走。等下一次心情变化时，仍能回到路口，用新的目光认出同一片稻妻。

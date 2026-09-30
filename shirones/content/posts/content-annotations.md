@@ -1,50 +1,29 @@
 ---
-title: Content Annotations
+title: "目光落下的地方，藏着温柔"
 published: 2026-08-27
-description: Add compact, accessible supporting notes to Shirone articles without interrupting the reading flow.
-tags: [Demo, Markdown, Annotation, Shirone]
-category: Guides
-lang: en
+description: "从雷电将军插画的眼神与细节里，记录一份安静的观看。"
+tags: ["原神", "雷电将军", "随笔"]
+category: "角色随笔"
+lang: "zh-CN"
 draft: false
 ---
 
-Content annotations keep supporting context close to a sentence without placing it directly in the reading flow. Activate the small note marker to reveal its content.
+## 从整体到一处细节
 
-## Basic syntax
+看一幅雷电将军的插画，第一眼很容易被紫色与流畅的轮廓吸引。它们让角色拥有鲜明的辨识度，隔着很远也能够认出。但继续看下去，真正使目光停住的，常常只是眼神的方向，或发梢与脸颊之间一小块柔和的阴影。
 
-Add a `[+label]` reference in ordinary prose, then define the matching note elsewhere in the same article.
+樱下这幅画里，花、书与小鸟使观看的节奏慢了下来。它们不是用来证明角色全部性格的证据，只是这张作品提供的一种表情。承认画面的边界，反而能更安心地欣赏它：此刻的温柔属于此刻，不必承担解释一切的任务。
 
-```markdown
-Astro renders most of a page ahead of time and hydrates **interactive islands** [+islands] only when they need to become interactive.
+![樱花树下的雷电将军，手边有书与小鸟](/assets/raiden/sakura.webp)
 
-[+islands]:
-  An island is an interactive UI component surrounded by static HTML. This keeps the default page lightweight while preserving focused interactivity.
-```
+## 温柔有自己的线条
 
-Astro renders most of a page ahead of time and hydrates **interactive islands** [+islands] only when they need to become interactive.
+温柔未必需要很明显的笑容。一个没有催促意味的停顿，一种愿意把目光交给身边事物的姿态，也能让画面显得亲近。我喜欢这种克制，因为它允许观者自己发现，而不是替每一处细节附上情绪说明。
 
-[+islands]:
-  An island is an interactive UI component surrounded by static HTML. This keeps the default page lightweight while preserving focused interactivity.
+角色的力量与这样的片刻并不冲突。正如雷声之后仍然可以听见风，鲜明的意志之外，也容得下不被大词覆盖的日常。我不想把画里的神情扩写成官方故事，只愿记录它如何改变了我的观看方式。
 
-## Rich content
+## 多看一会儿
 
-Definitions may contain paragraphs, emphasis, links, lists, and inline code [+rich-note] while the surrounding sentence continues normally.
+有些喜欢很适合慢慢发生。先认出一个名字，再注意到一处细节，后来即使关掉图片，也仍记得那一道视线落向何处。被记住的部分不一定最耀眼，却能在漫长的日常里温和地回来。
 
-[+rich-note]:
-  **Authoring guidance**
-
-  - Keep the first sentence self-contained.
-  - Use a link when readers may need the primary source.
-  - Prefer concise examples such as `client:visible`.
-
-  See the [Astro islands documentation](https://docs.astro.build/en/concepts/islands/) for the full model.
-
-## Multiple definitions
-
-Reuse a label [+review] to present a short sequence of related notes behind one marker.
-
-[+review]: Start with the decision that changes the reader's next action.
-[+review]: Keep implementation evidence separate from background context.
-[+review]: Remove details that belong in the main article instead of the annotation.
-
-Undefined references such as `[+missing]` remain ordinary text, so an unfinished definition never creates an empty control.
+写下这一页，是想给这样的观看留一个位置。下次再打开同一幅画，可以不寻找新的结论，只看看是否又有一处从前没有留意的细节，安静地走到了眼前。

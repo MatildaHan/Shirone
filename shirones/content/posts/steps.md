@@ -1,96 +1,29 @@
 ---
-title: Markdown Steps
+title: "走向山间时，先听见自己的脚步"
 published: 2026-08-27
-description: Present sequential instructions as a compact, accessible step flow in Shirone.
-tags: [Demo, Markdown, Steps, Shirone]
-category: Guides
-lang: en
+description: "把一段稻妻山路写成几个相连的片刻，让风景逐渐靠近。"
+tags: ["原神", "稻妻", "鸣神大社", "旅途"]
+category: "稻妻漫游"
+lang: "zh-CN"
 draft: false
 ---
 
-Use Steps for procedures whose order matters. The component keeps the article reading flow intact: a quiet numbered rail provides orientation while headings, paragraphs, links, lists, and code retain their native Markdown roles.
+## 山脚的光
 
-## Ordered list syntax
+我想象通往山间的路，先从一片明亮开始。近处的草木被日光照清，远处的树影则层层叠着，还看不出具体的边界。旅行者站在路口，把目光从山顶移回脚下，才发现第一步原来只需要看见眼前这一小段路。
 
-Wrap one Markdown ordered list in a `:::steps` container. Each top-level list item becomes one step.
+## 转弯以后
 
-````markdown
-:::steps[Production deployment]
-1. **Clone and prepare the workspace**
+上行的路会替风景安排节奏。转过一道弯，原先被树遮住的天空忽然露出；再走几步，背后的来路又退进枝叶里。看见与看不见交替发生，让抵达多了一层慢慢展开的期待。鸣神大社这个名字，也因此在想象中带上了高度。
 
-   Clone the repository and enter the project directory.
+## 停在树影里
 
-   ```powershell
-   git clone https://github.com/LyraVoid/Shirone.git
-   Set-Location Shirone
-   ```
+途中可以有一次短暂的休息。听风从枝头走过，看衣袖上的光点随叶片移动，等呼吸与脚步重新找到相同的速度。山路把注意力收得很近，使人暂时不用同时想着许多事情。只站稳，看看，然后继续。
 
-2. **Install dependencies**
+对我而言，这种缓慢与稻妻风景很相称。雷光留下鲜明的瞬间，山间的路却把时间拉长；两者放在同一段旅途中，目光便有了不同的停留方式。喜欢一个地方，也可以从愿意耐心地走向它开始。
 
-   Use the repository's pinned package manager.
+## 抬头的时候
 
-   ```powershell
-   pnpm.cmd install
-   ```
+等树冠与天空之间出现新的轮廓，仰望便自然发生了。前面仍有石阶，身后已经积累了一段走过的路。这一刻的风景之所以动人，也包含着一路上没有急着略过的细节。
 
-3. **Run project checks**
-
-   Confirm Astro diagnostics and TypeScript checks pass.
-
-   ```powershell
-   npx.cmd astro check
-   pnpm.cmd type-check
-   ```
-
-4. **Build the production site**
-
-   Generate the static site and search index.
-
-   ```powershell
-   pnpm.cmd build
-   ```
-:::
-````
-
-:::steps[Production deployment]
-1. **Clone and prepare the workspace**
-
-   Clone the repository and enter the project directory.
-
-   ```powershell
-   git clone https://github.com/LyraVoid/Shirone.git
-   Set-Location Shirone
-   ```
-
-2. **Install dependencies**
-
-   Use the repository's pinned package manager.
-
-   ```powershell
-   pnpm.cmd install
-   ```
-
-3. **Run project checks**
-
-   Confirm Astro diagnostics and TypeScript checks pass.
-
-   ```powershell
-   npx.cmd astro check
-   pnpm.cmd type-check
-   ```
-
-4. **Build the production site**
-
-   Generate the static site and search index.
-
-   ```powershell
-   pnpm.cmd build
-   ```
-:::
-
-## Options
-
-- `:::steps[Title]` or `title="Title"` adds a visible label and accessible name.
-- `start=4` changes the first displayed step number.
-- The container must contain exactly one ordered list. Invalid or mixed input remains ordinary readable Markdown instead of being interpreted heuristically.
-- Rendering is completed during the site build and adds no client JavaScript or network requests.
+这篇文字只是一场借景而生的漫游想象。它不提供路线，也不计算需要多久抵达。留下脚步声，是因为很多时候，向着喜欢的地方走去，本身就值得被认真记住。

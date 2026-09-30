@@ -1,4 +1,11 @@
 ---
-title: Media Embeds
-defaultCategory: Guides
+title: 与影同行
+defaultCategory: 角色随笔
 ---
+
+从雷电将军的形象出发，先看雷光之后的留白，再听想象中的稻妻雨声。两篇随笔分别记录观看与倾听的感受，为一份喜欢留出慢慢理解的空间。
+
+1. [雷光之后，我更愿意看见留白](/posts/video/)
+2. [把声音留给安静](/posts/audio-reader/)
+
+这个系列会继续收藏与影有关的个人感想，不把创作联想作为官方剧情。

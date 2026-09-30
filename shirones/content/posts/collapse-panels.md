@@ -1,70 +1,27 @@
 ---
-title: Markdown Collapse Panels
+title: "在稻妻的雨檐下借一刻停留"
 published: 2026-08-28
-description: Group optional Markdown content into compact, accessible M3E disclosure panels.
-tags: [Demo, Markdown, Collapse, Shirone]
-category: Guides
-lang: en
+description: "一段借景写下的雨中小憩，让赶路的心绪稍稍慢下来。"
+tags: ["原神", "稻妻", "旅途", "随笔"]
+category: "稻妻漫游"
+lang: "zh-CN"
 draft: false
 ---
 
-Collapse panels keep related optional details in one compact group. Titles and bodies retain inline and block Markdown, while native disclosure semantics make every panel usable without client JavaScript.
+## 雨把路分成两半
 
-## Independent panels
+想象一场突如其来的雨，把稻妻街道分成了屋檐内外两个世界。外面是被雨丝洗淡的颜色，里面是一小片暂时干燥的空地。旅行者收住脚步，原先打算去哪里，此刻忽然没有那么紧要。雨并未征求谁的意见，却替匆忙安排了一个停顿。
 
-Items open independently by default. Prefix a title with `:+` to open that item initially or `:-` to keep it closed when the group uses `expand`.
+屋檐滴下的水连成细线，落到地面又碎开。视线顺着水滴走，便会发现同一处地方原来有这么多细微的变化。天气使远景模糊，却把近处推得更清楚；一条还没走完的路，也因此多出一段无法预先安排的记忆。
 
-::: collapse
-- **Package requirements**
+## 借来的片刻
 
-  Use Node.js 22 or newer and enable Corepack before installing packages.
+我喜欢把这种停留叫作“借”。不必拥有一整天的闲暇，只向天气借几分钟，让心从下一个目的地收回来。提瓦特有许多壮阔的画面，可一个并不显眼的屋檐，也能给旅行提供足够具体的安慰。
 
-- :+ Install dependencies
+若在这时想起雷电将军，脑海中的紫色会与灰蓝的雨幕轻轻叠在一起。那是一种观看之后自然产生的联想，并不需要安排相遇。喜欢的角色有时就这样进入风景：她未必出现，某一种颜色或气氛却已经让人想起她。
 
-  Run the workspace package command from the repository root.
+## 等雨小一点
 
-  ```powershell
-  pnpm.cmd install
-  ```
+雨停之前，没有必须完成的事情。可以看看鞋边溅起的水，可以把未写完的句子在心里读一遍，也可以什么都不想。这样的空白并不会让旅途少掉一块，反而使重新出发时的脚步更清晰。
 
-- Validation commands
-
-  Check the content pipeline before building the production output.
-
-  - `pnpm.cmd check:manifest`
-  - `npx.cmd astro check`
-:::
-
-## Accordion mode
-
-Add `accordion` when only one answer should remain open. The browser groups the native disclosures directly, so opening another item closes the previous one without hydration.
-
-::: collapse accordion expand
-- What does `expand` do here?
-
-  It opens the first item initially when no item has a `:+` marker.
-
-- Can a title contain Markdown?
-
-  Yes. Titles support inline **emphasis** and `code`, while panel bodies support full block Markdown.
-
-- What happens on a narrow screen?
-
-  Content padding becomes compact, long text wraps, and embedded code keeps its own horizontal scrolling area.
-:::
-
-## Author syntax
-
-````markdown
-::: collapse accordion
-- :+ First title
-
-  First panel content.
-
-- Second title with `code`
-
-  Second panel content.
-:::
-````
-
-The container must contain exactly one top-level unordered list. Every item needs a title paragraph, a blank line, and body content. Invalid or mixed input remains an ordinary readable Markdown list.
+等檐外的雨声稀疏下来，再把路接着走完。带走的不必是一幅完美的晴天景色，也可以是短暂被遮住的天空，以及有人终于愿意停下来的那几分钟。

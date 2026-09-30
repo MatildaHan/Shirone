@@ -55,7 +55,7 @@ export const animeData: AnimeItem[] = [
 		description: "Girl's gunfight",
 		year: "2022",
 		studio: "A-1 Pictures",
-		genres: ["Action", "Slice of Life"],
+		genres: ["动作", "日常"],
 		period: { start: "2022-07", end: "2022-09" },
 	},
 	{
@@ -68,7 +68,7 @@ export const animeData: AnimeItem[] = [
 		description: "Girl's daily life, sweet and healing",
 		year: "2015",
 		studio: "Nexus",
-		genres: ["Daily life", "Healing"],
+		genres: ["日常", "治愈"],
 		period: { start: "2015-07", end: "2015-09" },
 	},
 	{
@@ -81,7 +81,7 @@ export const animeData: AnimeItem[] = [
 		description: "Meeting girls among the stars, pure love and healing",
 		year: "2020",
 		studio: "Doga Kobo",
-		genres: ["Romance", "Healing"],
+		genres: ["恋爱", "治愈"],
 		period: { start: "2020-01", end: "2020-03" },
 	},
 	{
@@ -94,7 +94,7 @@ export const animeData: AnimeItem[] = [
 		description: "A group of girls' warm daily life",
 		year: "2014",
 		studio: "White Fox",
-		genres: ["Daily life", "Healing"],
+		genres: ["日常", "治愈"],
 		period: { start: "2014-04", end: "2014-06" },
 	},
 	{
@@ -107,7 +107,7 @@ export const animeData: AnimeItem[] = [
 		description: "Muli, Muli!",
 		year: "2024",
 		studio: "C2C",
-		genres: ["Daily life", "Healing", "Magic"],
+		genres: ["日常", "治愈", "魔法"],
 		period: { start: "2025-07", end: "2025-10" },
 	},
 ];

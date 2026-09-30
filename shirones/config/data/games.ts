@@ -23,9 +23,9 @@ export const gamesData: GameItem[] = [
 		icon: "material-symbols:explore-outline-rounded",
 		rating: 4.5,
 		hours: 86,
-		platform: "PC",
+		platform: "电脑",
 		year: "2026",
-		tags: ["Open World", "Urban", "Supernatural"],
+		tags: ["开放世界", "都市", "超自然"],
 		description:
 			"A supernatural urban open-world RPG. As an anomaly-user who senses the “waves” of people and anomalies, you join E.T.D Squad Six and investigate the city's paranormal events.",
 		link: "https://yh.wanmei.com/main.html",
@@ -41,9 +41,9 @@ export const gamesData: GameItem[] = [
 		icon: "material-symbols:widgets-rounded",
 		rating: 5,
 		hours: 420,
-		platform: "PC",
+		platform: "电脑",
 		year: "2011",
-		tags: ["Sandbox", "Survival", "Building"],
+		tags: ["沙盒", "生存", "建造"],
 		description:
 			"A blocky sandbox where you mine, craft and build across procedurally generated worlds. Survive the night, or just keep building — alone or with friends.",
 		link: "https://www.minecraft.net/",

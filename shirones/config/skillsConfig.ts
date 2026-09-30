@@ -18,17 +18,17 @@ export const skillsConfig: SkillsConfig = withUserConfig("skills", {
 	categories: [
 		{
 			key: "frontend",
-			label: "Frontend",
+			label: "前端开发",
 			icon: "material-symbols:web-rounded",
 		},
 		{
 			key: "backend",
-			label: "Backend",
+			label: "后端开发",
 			icon: "material-symbols:dns-rounded",
 		},
 		{
 			key: "tooling",
-			label: "Tooling",
+			label: "开发工具",
 			icon: "material-symbols:construction-rounded",
 		},
 	],

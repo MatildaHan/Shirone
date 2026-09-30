@@ -22,7 +22,7 @@ export const friendsData: FriendItem[] = [
 		imgurl: "https://avatars.githubusercontent.com/u/225602409?v=4&s=640",
 		desc: "Another Fuwari-based blog theme with docs",
 		siteurl: "https://mizuki.mysqil.com",
-		tags: ["Blog", "Theme"],
+		tags: ["博客", "主题"],
 	},
 	{
 		id: 2,
@@ -30,7 +30,7 @@ export const friendsData: FriendItem[] = [
 		imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
 		desc: "The web framework for content-driven websites",
 		siteurl: "https://astro.build",
-		tags: ["Framework"],
+		tags: ["框架"],
 	},
 	{
 		id: 3,
@@ -38,7 +38,7 @@ export const friendsData: FriendItem[] = [
 		imgurl: "https://avatars.githubusercontent.com/u/19478152?v=4&s=640",
 		desc: "Material Design 3 — the next generation of Material Design",
 		siteurl: "https://m3.material.io",
-		tags: ["Design"],
+		tags: ["设计"],
 	},
 ];
 

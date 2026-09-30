@@ -1,25 +1,27 @@
 ---
-title: Markdown Spoilers
+title: "把尚未翻开的故事，留给明天"
 published: 2026-08-28
-description: Hide inline answers while keeping spoiler content accessible in Shirone Markdown.
-tags: [Demo, Markdown, Accessibility, Shirone]
-category: Guides
-lang: en
+description: "喜欢一个角色，也可以为未知保留一点耐心与期待。"
+tags: ["原神", "雷电将军", "旅途", "随笔"]
+category: "旅途拾光"
+lang: "zh-CN"
 draft: false
 ---
 
-Spoilers conceal a short answer or plot detail without removing it from the document. Hover, focus, or activate the native control to reveal the content.
+## 书合着的时候
 
-## Inline details
+有些故事尚未翻开，就已经拥有了吸引人的轮廓。也许是一张雷电将军的插画，也许只是稻妻的一个地名，使人愿意靠近。这个时候的喜欢带着空白，知道的还不多，想象却很容易沿着画面向远处延伸。
 
-The answer is :spoiler[**42**], and this sentence remains ordinary Markdown around it.
+我愿意保护这样的开始。让第一眼先作为第一眼存在，让好奇暂时没有明确的答案。故事之外的期待也有自己的颜色，像清晨还未完全散开的雾，既遮住一部分景色，也让看见它的愿望变得更清楚。
 
-Spoilers can include `inline code` and :spoiler[a longer detail with **emphasis**].
+## 阅读有自己的时辰
 
-## Author syntax
+关于角色，总能找到许多别人的理解。它们可以提供新的角度，却无法代替每个人与故事相遇的时刻。同一句话，有人立刻记住，有人要在很久以后才重新想起；这种时间上的差别，使阅读保留着个人的温度。
 
-```markdown
-The answer is :spoiler[42].
-```
+写《原神》随笔时，我希望为读者留下这种余地。谈画面带来的感受，谈一个意象如何走进日常，尽量把具体情节的答案留在故事本身。喜欢雷电将军，可以先从雷光与紫色开始，也可以在慢慢理解之后，发现自己在意的是另一处细节。
 
-The generated HTML uses a native button with an `aria-expanded` state. Without JavaScript, hover and focus still reveal the text; the optional runtime adds click and keyboard toggling.
+## 下一页仍然在那里
+
+未读完的故事像一条尚有转弯的路。走到这里，可以先坐一会儿，把已经看见的景色在心里安放好。等到准备继续时，那份好奇仍然可以成为温和的引路者。认真阅读，并不需要始终保持最快的步速。
+
+这一页就停在翻页之前。让纸张的边缘留一点亮，让远处的名字继续等待。明天再读下去时，或许会遇见惊喜，也或许只是更清楚地明白，今天为什么愿意在这里停留。

@@ -11,6 +11,7 @@ export default defineConfig({
       // overwrite it. All existing theme widgets and routes remain available.
       components: {
         "layouts/MainGridLayout": "./src/layouts/MainGridLayout.astro",
+        "molecules/TimelineCard": "./src/components/molecules/TimelineCard.svelte",
       },
     }),
   ],

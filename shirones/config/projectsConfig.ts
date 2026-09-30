@@ -18,12 +18,12 @@ export const projectsConfig: ProjectsConfig = withUserConfig("projects", {
 	categories: [
 		{
 			key: "theme",
-			label: "Theme",
+			label: "博客主题",
 			icon: "material-symbols:palette-outline-rounded",
 		},
 		{
 			key: "android",
-			label: "Android",
+			label: "安卓开发",
 			icon: "material-symbols:android-rounded",
 		},
 	],

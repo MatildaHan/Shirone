@@ -1,37 +1,27 @@
 ---
-title: Markdown Abbreviations
+title: "轻轻唤一声影"
 published: 2026-08-28
-description: Define common acronyms once and keep their full meaning available in normal article text.
-tags: [Demo, Markdown, Typography, Shirone]
-category: Guides
-lang: en
+description: "名字如何让一份遥远的喜欢，拥有可以安放的距离。"
+tags: ["原神", "雷电将军", "随笔"]
+category: "角色随笔"
+lang: "zh-CN"
 draft: false
 ---
 
-Abbreviations keep technical writing compact while preserving the full term for readers who need it. A defined term renders as a native `abbr` element with its meaning available on hover and to assistive technology.
+## 名字的轻与重
 
-## In context
+“雷电将军”四个字带着清晰的分量。它使人想到稻妻、雷光与庄严的姿态，像一个已经立在远处的轮廓。相比之下，“影”这个名字短得多，写在纸上只占很小的位置，却会让阅读的心情悄悄改变。
 
-SSR-first output keeps the initial document visible before JavaScript runs. When measuring its reading experience, LCP and CLS reveal whether the first visible content is fast and stable.
+在这里轻轻写下它，并不是认为一个称呼能够缩短所有距离。名字更像门前的一盏小灯，让人知道目光正朝向谁，也提醒人，角色不必永远被最宏大的概念包围。可以先从具体的形象开始，慢慢谈自己的喜欢。
 
-An abbreviation can also appear next to ordinary Markdown such as **SSR** guidance, but literal code such as `SSR` and links like [LCP documentation](https://web.dev/articles/lcp) remain untouched.
+## 不替名字作答
 
-## Define terms
+越喜欢一个角色，越容易想替她补全没有说出的心事。我愿意在落笔时克制一点：画面带来的联想属于观看者，故事已经交代的部分则有它自己的边界。两者可以相互照亮，却不应该在文字里悄悄变成同一回事。
 
-Place definitions anywhere in the same Markdown document. They do not render as visible paragraphs, and only matching terms in that article receive the semantic abbreviation treatment.
+因此，这篇随笔不写她一定会如何回应，也不安排一场并不存在的对话。我想写的是，自己为什么愿意在读完一段故事后，仍把这个名字放在心里。也许因为坚定的姿态，也许因为安静的神情，又或者只是某一次被紫色与雷光留住的目光。
 
-```markdown
-*[SSR]: Server-Side Rendering
-*[LCP]: Largest Contentful Paint
-*[CLS]: Cumulative Layout Shift
+## 把称呼放回日常
 
-SSR makes an HTML response available before client code runs.
-```
+一个喜欢的名字，最终会进入很普通的日子。翻开图片时会想到，整理书签时会想到，偶尔看见近似的颜色，也会短暂地想起。这样的回返不需要特别的仪式，却能让日常多出一点温度。
 
-*[SSR]: Server-Side Rendering
-*[LCP]: Largest Contentful Paint
-*[CLS]: Cumulative Layout Shift
-
-## Authoring boundaries
-
-Terms must begin with a letter or number and may contain letters, numbers, periods, underscores, plus signs, and hyphens. Each definition applies to the current article only; an invalid or duplicate definition remains ordinary Markdown instead of silently replacing another term.
+“影”便适合被这样轻轻念起。它无需成为句句都要强调的主题，只在合适的地方出现，像一枚夹在书中的花瓣。等再次翻到那一页，仍能认出当时的心情，就足够了。

@@ -1,38 +1,29 @@
 ---
-title: Include Video in the Posts
+title: "雷光之后，我更愿意看见留白"
 published: 2023-08-01
-description: This post demonstrates how to include embedded video in a blog post.
-tags: [Example, Video]
+description: "从雷电将军的形象出发，写下力量与静默之间的距离。"
+tags: ["原神", "雷电将军", "永恒", "随笔"]
 series: media-embeds
 seriesOrder: 1
-category: Examples
+category: "角色随笔"
 draft: false
+lang: "zh-CN"
 ---
 
-Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.
+## 一瞬间的明亮
 
-```yaml
----
-title: Include Video in the Post
-published: 2023-10-19
-// ...
----
+雷光最容易占据视线。它把原本模糊的轮廓突然照清，让动作、目光与衣袂在同一个瞬间变得鲜明。雷电将军的形象也常带给我这样的感受：不需要冗长的铺垫，只凭一个姿态，就能让画面的重心安定下来。
 
-<iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-```
+不过，明亮过去之后，我反而更愿意多停一会儿。强烈的印象像钟声，敲响的那一刻固然重要，余音如何散进空间，同样决定它被记住的方式。若始终只追逐最亮的部分，就很容易错过角色身上那些并不争抢目光的细节。
 
-## YouTube
+## 静默的分量
 
-::youtube{id="5gIf0_xpFPI" title="YouTube video" preload="auto"}
+我所说的留白，是一段没有急着表态的沉默，是画面中尚未被填满的天空，也是观者可以安放自己感受的位置。面对雷电将军，我既会感到距离，也会生出想要了解的心情。这两种感受可以并存，并不需要立刻选出一种作为最终答案。
 
-## Bilibili
+紫色的层次、垂落的发梢、握刀时清晰的线条，都让坚定变成可以看见的东西。但坚定究竟指向何处，仍值得慢慢读。比起替她写下一句概括一切的评语，我更愿意把问题留在纸上，允许下一次观看带来不同的理解。
 
-::bilibili{bvid="BV1fK4y1s7Qf" title="Bilibili video" p=1 preload="auto"}
+## 与影同行的开篇
 
-## AcFun
+“与影同行”在这里是一种阅读的姿态：沿着喜欢的角色继续观察，而不声称自己已经走进她全部的心事。第一篇写雷光之后的留白，下一篇写[把声音留给安静](/posts/audio-reader/)。从明亮走向低回，也许能更接近我喜欢这份形象的原因。
 
-::acfun{acid="ac48649632" title="AcFun video" preload="auto"}
-
-## ArtPlayer
-
-::artplayer{src="https://www.pexels.com/download/video/38538991/" title="Sintel trailer" preload="auto"}
+当画面结束时，眼睛仍记得那一束紫色。无需让它一直闪耀，能在日常里偶尔想起，就已经很好。

@@ -1,111 +1,31 @@
 ---
-title: Markdown Field Cards
-description: API and component parameter documentation cards.
+title: "为稻妻写一本小小的风景词典"
+description: "收集几枚与稻妻有关的词，暂存成一页尚待整理的随笔。"
 published: 2026-08-30
-category: Guides
+category: "稻妻漫游"
 draft: true
+tags: ["原神", "稻妻", "风景", "随笔"]
+lang: "zh-CN"
 ---
 
-Use `field-group` when several related options belong to the same API or component. Put the field name on the opening line, then add metadata tags before the description.
+## 风
 
-:::: field-group
+写稻妻，想先给“风”留一个位置。它让衣角与枝叶有了方向，也把远处的声音送到近处。风很难被单独画出来，却能通过许多细小的变化被看见。这样的存在方式，让一幅安静的景色也显得有呼吸。
 
-::: field tex
-@type object
-@optional
+## 紫
 
-TeX parser options.
-:::
+“紫”会使我想到雷电将军。深浅不同的色块连成清晰的轮廓，又在花与光之间慢慢变得柔和。若为它写一条释义，我愿意先记下观看时的感觉：清醒、沉静，还有一种让目光愿意多停留片刻的力量。以后也许还会找到更合适的词。
 
-::: field output
-@type `'svg' | 'chtml'`
-@default `'svg'`
-@optional
+## 灯
 
-Output format, SVG or generic HTML.
-:::
+灯适合放在靠后的一页，等天色暗下来再读。它使街角有了温度，让门窗从建筑的一部分变成可以想象生活的地方。一盏灯照到的范围有限，恰好使人看清近处值得珍惜的事物。写到这里，句子的步子也自然慢了下来。
 
-::::
+## 花
 
-## Basic Fields
+花让时间有了可以观察的形状。枝头、空中与地面，分别留下不同阶段的轻与静。想到神樱时，我更愿意细看一片花瓣，借它靠近那片辽阔的树冠。很小的事物，有时能为难以想象的长久提供一个入口。
 
-Required, optional, and deprecated statuses can be mixed in one group. Default values are kept separate from the type so they remain easy to scan.
+## 路
 
-:::: field-group
+最后暂时放进“路”。路连接地名，也连接不同的心情；有人沿着它抵达，有人在转弯处决定多停一会儿。风景词典因此还没有写完，新的词仍会从路上来。
 
-::: field title
-@type string
-@required
-
-The visible title of the component. This value is shown in the page heading and should be short enough to scan quickly.
-:::
-
-::: field disabled
-@type boolean
-@default `false`
-@optional
-
-Whether the control starts in a disabled state.
-:::
-
-::: field locale
-@type `'en' | 'zh-CN' | 'ja-JP'`
-@default `'en'`
-@optional
-
-Locale used for formatting dates, numbers, and accessible labels.
-:::
-
-::::
-
-## Rich Descriptions
-
-Descriptions are ordinary Markdown. Links, emphasis, lists, and inline code remain available after the metadata lines.
-
-:::: field-group
-
-::: field render
-@type `(value: unknown) => string`
-@required
-
-Render a value into the final output. The callback should return a **safe string** and may use the `formatValue` helper.
-
-- Keep rendering deterministic.
-- Avoid network requests inside the callback.
-:::
-
-::: field retries
-@type number
-@default `3`
-@optional
-
-Maximum number of attempts before the request is reported as failed.
-:::
-
-::: field legacyMode
-@type boolean
-@deprecated
-
-Kept for backwards compatibility. New integrations should use `compatibility` instead.
-:::
-
-::::
-
-## Standalone Field
-
-A single field can be used without a group when documenting one option next to an example or code block.
-
-::: field format
-@type `'short' | 'long'`
-@default `'short'`
-@optional
-
-Controls how the result is formatted.
-:::
-
-## Authoring Notes
-
-- `@type` and `@default` values are rendered as code tokens.
-- `@required`, `@optional`, and `@deprecated` add a status badge.
-- Any normal Markdown after the metadata becomes the field description.
-- Unknown `@tags` remain visible as description text instead of being discarded.
+这页草稿收集的都是个人观看与联想，不是游戏设定的解释。等词与词之间的关系更清楚，再把它们整理成完整的文章。如今先把这些小小的入口留下，供未来的自己继续走进去。
