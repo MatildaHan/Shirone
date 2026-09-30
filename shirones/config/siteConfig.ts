@@ -47,9 +47,9 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	// 页面背景纹理系统配置（5 大精美预设 + 零开销 HCT 动态取色）
 	texture: {
 		enable: true, // 是否启用背景纹理系统
-		defaultPreset: "starlight", // 默认纹理预设："none" | "starlight" | "cyber-dots" | "topography" | "geometric" | "sakura"
+		defaultPreset: "none", // 壁纸模式保持干净，访客仍可在显示设置中选择纹理。
 		defaultOpacity: 0.12, // 默认纹理浓度 (0.05 ~ 0.25)
-		allowMotion: true, // 是否允许背景微动效（开启 reduced-motion 时自动静止）
+		allowMotion: false, // 静态纹理避免与整屏壁纸争夺注意力。
 	},
 	banner: {
 		// 推荐将图片放入 src/assets，并填写相对 src 的路径，以启用构建期 AVIF/WebP 响应式优化。
@@ -65,7 +65,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		dim: {
 			// 在图片上覆盖黑色遮罩以提高标题和顶部栏的对比度；opacity 范围为 0-1。
 			enable: true,
-			opacity: 0.24,
+			opacity: 0.32,
 		},
 		homeText: {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
@@ -99,11 +99,11 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 			// 交叉淡入淡出（Crossfade）过渡时长（毫秒，默认 1200ms）。
 			fadeDuration: 1200,
 			// 运镜呼吸动画模式："ken-burns"（默认，循环运镜）| "zoom-in"（推进）| "zoom-out"（拉远）| "pan-left"（左移）| "pan-right"（右移）| "none"（无运镜）。
-			animation: "ken-burns",
+			animation: "none",
 		},
 		waves: {
 			// 在 Banner 底部渲染页面背景色水波纹；关闭后不输出波浪 DOM。
-			enable: true,
+			enable: false,
 		},
 	},
 	// Markdown 正文图片处理；仅匹配远程图片，不会产生额外网络请求或客户端代码。

@@ -7,9 +7,11 @@ import shirones from "shirones";
 export default defineConfig({
   integrations: [
     shirones({
-      // Override individual components by mirroring the theme's structure in
-      // `src/components/`, or point at them explicitly:
-      // components: { "atoms/blog/PostCard": "./src/components/PostCard.astro" },
+      // Keep the visual customization in the project so theme updates do not
+      // overwrite it. All existing theme widgets and routes remain available.
+      components: {
+        "layouts/MainGridLayout": "./src/layouts/MainGridLayout.astro",
+      },
     }),
   ],
 });

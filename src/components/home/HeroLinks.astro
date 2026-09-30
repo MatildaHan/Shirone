@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+import { profileConfig, siteConfig } from "@/config";
+import { url } from "@utils/url-utils";
+
+// This lives outside the Swup container, just like BannerStage. CSS follows
+// the theme's current-page and wallpaper attributes after every navigation.
+const links = profileConfig.links.slice(0, 3);
+---
+
+{siteConfig.banner.homeText.enable && (
+  <div class="home-hero-links">
+    <span class="home-hero-links__top-marker" aria-hidden="true"></span>
+    <nav class="home-hero-links__social" aria-label="社交链接与订阅">
+      {links.map((link) => (
+        <a href={link.url} target="_blank" rel="me noopener noreferrer" aria-label={link.name} title={link.name}>
+          <Icon name={link.icon} aria-hidden="true" />
+          <span>{link.name}</span>
+        </a>
+      ))}
+      <a href={url("/rss/")} aria-label="RSS 订阅" title="RSS 订阅">
+        <Icon name="material-symbols:rss-feed-rounded" aria-hidden="true" />
+        <span>RSS</span>
+      </a>
+    </nav>
+    <a class="home-hero-links__scroll" href="#main-content-column" data-no-swup aria-label="向下浏览文章">
+      <span>向下探索</span>
+      <Icon name="material-symbols:keyboard-arrow-down-rounded" aria-hidden="true" />
+    </a>
+  </div>
+)}
+
+<script>
+  // Blur the wallpaper once the visitor leaves the opening view. Observing
+  // a small marker avoids doing layout work on every scroll event.
+  const marker = document.querySelector(".home-hero-links__top-marker");
+  if (marker) {
+    new IntersectionObserver(([entry]) => {
+      document.body.dataset.heroScrolled = String(!entry.isIntersecting);
+    }).observe(marker);
+  }
+</script>

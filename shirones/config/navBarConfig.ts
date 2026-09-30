@@ -143,13 +143,14 @@ const defaultNavBarConfig: NavBarConfig = {
 		LinkPresets.Archive,
 		LinkPresets.Friends,
 		LinkPresets.Moments,
-		LinkPresets.Anime,
-		LinkPresets.Compass,
-		LinkPresets.Albums,
+		LinkPresets.About,
 		{
 			name: i18n(I18nKey.more),
 			icon: "material-symbols:apps-rounded",
 			children: [
+				LinkPresets.Anime,
+				LinkPresets.Compass,
+				LinkPresets.Albums,
 				LinkPresets.Timeline,
 				LinkPresets.Projects,
 				LinkPresets.Devices,
@@ -159,7 +160,6 @@ const defaultNavBarConfig: NavBarConfig = {
 				// 需要时取消注释即可
 				// LinkPresets.Categories,
 				// LinkPresets.Tags,
-				LinkPresets.About,
 				LinkPresets.GitHub,
 			],
 		},

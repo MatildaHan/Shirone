@@ -1,0 +1,378 @@
+/* Project-owned presentation layer. Reuses Shirone's palette, widgets,
+   wallpaper preferences and Swup page attributes; no content overrides. */
+:root {
+  --home-hero-height: 100svh;
+  --reading-banner-height: clamp(19rem, 38vh, 27rem);
+  --glass-opacity: 82%;
+  --glass-blur: 14px;
+  --glass-border: color-mix(in srgb, var(--on-surface) 9%, transparent);
+  --glass-shadow: 0 6px 24px rgb(23 20 39 / 5%);
+}
+
+html.dark {
+  --glass-opacity: 88%;
+  --glass-border: color-mix(in srgb, var(--on-surface) 12%, transparent);
+  --glass-shadow: 0 6px 24px rgb(0 0 0 / 12%);
+}
+
+body {
+  --banner-stage-height: var(--reading-banner-height);
+  --banner-panel-overlap: 1.5rem;
+  --banner-content-top: calc(var(--banner-stage-height) - var(--banner-panel-overlap));
+}
+
+body[data-current-page="home"] {
+  --banner-stage-height: var(--home-hero-height);
+  --banner-panel-overlap: 0rem;
+}
+
+/* Keep the theme's optimized picture and carousel. Only its placement changes:
+   the photograph stays fixed while the title scrolls with the document. */
+html[data-wallpaper-mode="banner"] #banner-wrapper {
+  z-index: 0;
+  overflow: visible;
+  background: transparent;
+}
+
+html[data-wallpaper-mode="banner"] .banner-stage__media,
+html[data-wallpaper-mode="banner"] .banner-stage__scrim {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+html[data-wallpaper-mode="banner"] .banner-stage__media {
+  overflow: hidden;
+  transition: filter 450ms ease, transform 450ms ease;
+}
+
+html[data-wallpaper-mode="banner"] .banner-stage__scrim {
+  background: linear-gradient(180deg,
+    rgb(15 20 35 / calc(var(--banner-dim-opacity) * 0.9)),
+    rgb(15 20 35 / calc(var(--banner-dim-opacity) * 0.5)) 50%,
+    rgb(15 20 35 / var(--banner-dim-opacity)));
+}
+
+html.dark[data-wallpaper-mode="banner"] .banner-stage__scrim {
+  background: rgb(12 14 25 / max(0.45, var(--banner-dim-opacity)));
+}
+
+html[data-wallpaper-mode="banner"] body[data-banner-scrolled="true"] .banner-stage__media,
+html[data-wallpaper-mode="banner"] body[data-hero-scrolled="true"] .banner-stage__media,
+html[data-wallpaper-mode="banner"] body:not([data-current-page="home"]) .banner-stage__media {
+  filter: blur(8px);
+  transform: scale(1.035);
+}
+
+html[data-wallpaper-mode="banner"] body {
+  --card-bg: color-mix(in srgb, var(--surface-container-lowest) var(--glass-opacity), transparent);
+}
+
+html.dark[data-wallpaper-mode="banner"] body {
+  --card-bg: color-mix(in srgb, var(--surface-container) var(--glass-opacity), transparent);
+}
+
+/* Readable glass: use translucency on containers, never on their text. */
+#main-grid .m3-profile,
+#main-grid widget-layout > .m3-card,
+#category-bar,
+.m3-blog-postcard {
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+#main-grid {
+  padding-top: 1.25rem;
+  gap: 1.25rem;
+}
+
+#main-content-column {
+  scroll-margin-top: 4rem;
+}
+
+#main-content-column:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: var(--shape-corner-l);
+}
+
+#banner-wrapper .banner-stage__copy--home {
+  padding: 4rem 1.5rem 8rem;
+}
+
+#banner-wrapper .banner-stage__copy--home h1 {
+  font-size: clamp(3.25rem, 6vw, 5.5rem);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+#banner-wrapper .banner-stage__copy--home p {
+  max-width: min(42rem, 90vw);
+  min-height: 3rem;
+  margin-top: 1.25rem;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  line-height: 1.7;
+  text-wrap: balance;
+}
+
+.home-hero-links {
+  display: none;
+  position: absolute;
+  inset: 0 0 auto;
+  height: var(--home-hero-height);
+  z-index: 2;
+  pointer-events: none;
+  color: white;
+}
+
+html[data-wallpaper-mode="banner"] body[data-current-page="home"] .home-hero-links {
+  display: block;
+}
+
+.home-hero-links__top-marker {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 80px;
+}
+
+.home-hero-links__social {
+  position: absolute;
+  top: calc(50% + 4.5rem);
+  inset-inline: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.home-hero-links__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 14%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: 0 1px 6px rgb(0 0 0 / 30%);
+  pointer-events: auto;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.home-hero-links svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+}
+
+.home-hero-links a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+.home-hero-links__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  min-width: 5rem;
+  min-height: 3rem;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-shadow: 0 1px 8px rgb(0 0 0 / 45%);
+  pointer-events: auto;
+}
+
+.home-hero-links__scroll svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* A compact profile leaves room for announcements and categories. */
+#main-grid .m3-profile {
+  padding: 1.75rem 1rem 1.25rem;
+}
+
+#main-grid .m3-profile__avatar-link {
+  width: 7rem;
+  max-width: 7rem;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  border: 4px solid color-mix(in srgb, var(--surface-container-lowest) 90%, transparent);
+  box-shadow: 0 4px 18px rgb(20 20 40 / 12%);
+}
+
+#main-grid .m3-profile__avatar-link .m3-avatar {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#main-grid .m3-profile__bio {
+  line-height: 1.8;
+  margin-block: 0.75rem 1rem;
+}
+
+#main-grid .m3-profile__accent {
+  width: 1.75rem;
+  height: 3px;
+  margin-top: 0.6rem;
+}
+
+.top-app-bar__nav-link {
+  white-space: nowrap;
+}
+
+#navbar:not(.top-app-bar--transparent) {
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 2px 14px rgb(20 20 40 / 4%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+#category-bar {
+  padding: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.m3-blog-postcard {
+  transition: box-shadow 200ms ease, border-color 200ms ease;
+}
+
+#post-list .m3-blog-postcard__title {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+#post-list .m3-blog-postcard__desc {
+  line-height: 1.8;
+  margin-top: 0.85rem;
+}
+
+#post-list .m3-blog-postcard__tags {
+  row-gap: 0.4rem;
+}
+
+/* Long-form reading uses a nearly opaque surface. */
+html[data-wallpaper-mode="banner"] .post-card {
+  --card-bg: color-mix(in srgb, var(--surface-container-lowest) 96%, transparent);
+}
+
+html.dark[data-wallpaper-mode="banner"] .post-card {
+  --card-bg: color-mix(in srgb, var(--surface-container) 97%, transparent);
+}
+
+#main-grid .footer {
+  margin-top: 1.25rem;
+  border-radius: var(--shape-corner-l);
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+@media (hover: hover) {
+  .home-hero-links__social a:hover {
+    background: rgb(255 255 255 / 28%);
+    transform: translateY(-3px);
+  }
+
+  .m3-blog-postcard:hover {
+    border-color: color-mix(in srgb, var(--primary) 32%, transparent);
+    box-shadow: 0 8px 28px rgb(23 20 39 / 10%);
+  }
+}
+
+@media (min-width: 1024px) {
+  #main-grid {
+    --sidebar-width: 15.5rem;
+  }
+
+  html[data-wallpaper-mode="banner"] body[data-current-page="home"][data-banner-has-desktop="false"] .home-hero-links {
+    display: none;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  html[data-wallpaper-mode="banner"] body[data-current-page="home"][data-banner-has-mobile="false"] .home-hero-links {
+    display: none;
+  }
+  /* The theme deliberately hides the banner on mobile inner pages. */
+  html[data-wallpaper-mode="banner"] body:not([data-current-page="home"]) {
+    --card-bg: var(--surface-container-lowest);
+  }
+
+  html.dark[data-wallpaper-mode="banner"] body:not([data-current-page="home"]) {
+    --card-bg: var(--surface-container-high);
+  }
+
+  #banner-wrapper .banner-stage__copy--home h1 {
+    font-size: clamp(3rem, 10vw, 4.5rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --glass-opacity: 91%;
+    --glass-blur: 8px;
+  }
+
+  #main-grid {
+    padding-inline: 0.85rem;
+    gap: 1rem;
+  }
+
+  .home-hero-links__social {
+    gap: 0.5rem;
+  }
+
+  .home-hero-links__social a {
+    padding-inline: 0.8rem;
+  }
+
+  #banner-wrapper .banner-stage__copy--home p {
+    min-height: 3.75rem;
+    font-size: 1.05rem;
+  }
+
+  #post-list .m3-blog-postcard__title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-wallpaper-mode="banner"] .banner-stage__media,
+  .home-hero-links a,
+  .m3-blog-postcard {
+    transition: none;
+  }
+}
+
+html.motion-reduced .banner-stage__media,
+html.motion-reduced .home-hero-links a,
+html.motion-reduced .m3-blog-postcard {
+  transition: none;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root {
+    --glass-opacity: 97%;
+  }
+}
