@@ -12,7 +12,14 @@ import { postSchema, momentSchema, specSchema, seriesSchema } from "shirones/col
  */
 const posts = defineCollection({
 	loader: glob({ base: "./shirones/content/posts", pattern: "**/*.{md,mdx}" }),
-	schema: postSchema,
+	// Apply the visual theme to covers without changing Markdown frontmatter.
+	// A stable title-based choice keeps list, detail and sharing images in sync.
+	schema: postSchema.transform((post) => ({
+		...post,
+		image: Array.from(post.title).reduce((sum, character) => sum + character.codePointAt(0)!, 0) % 2
+			? "/assets/raiden/quiet.webp"
+			: "/assets/raiden/sakura.webp",
+	})),
 });
 
 const moments = defineCollection({

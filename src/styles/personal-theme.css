@@ -48,9 +48,10 @@ html[data-wallpaper-mode="banner"] .banner-stage__media {
 
 html[data-wallpaper-mode="banner"] .banner-stage__scrim {
   background: linear-gradient(180deg,
-    rgb(15 20 35 / calc(var(--banner-dim-opacity) * 0.9)),
-    rgb(15 20 35 / calc(var(--banner-dim-opacity) * 0.5)) 50%,
-    rgb(15 20 35 / var(--banner-dim-opacity)));
+    rgb(28 17 48 / calc(var(--banner-dim-opacity) * 0.7)),
+    rgb(28 17 48 / calc(var(--banner-dim-opacity) * 0.2)) 35%,
+    rgb(28 17 48 / var(--banner-dim-opacity)) 70%,
+    rgb(28 17 48 / 0.7));
 }
 
 html.dark[data-wallpaper-mode="banner"] .banner-stage__scrim {
@@ -99,13 +100,16 @@ html.dark[data-wallpaper-mode="banner"] body {
 }
 
 #banner-wrapper .banner-stage__copy--home {
-  padding: 4rem 1.5rem 8rem;
+  inset: 59% 0 auto;
+  padding: 0 1.5rem;
+  justify-content: flex-start;
 }
 
 #banner-wrapper .banner-stage__copy--home h1 {
-  font-size: clamp(3.25rem, 6vw, 5.5rem);
-  letter-spacing: -0.035em;
-  line-height: 1.1;
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  letter-spacing: 0.12em;
+  text-indent: 0.12em;
+  line-height: 1.2;
   text-wrap: balance;
 }
 
@@ -139,9 +143,20 @@ html[data-wallpaper-mode="banner"] body[data-current-page="home"] .home-hero-lin
   height: 80px;
 }
 
+.home-hero-links__eyebrow {
+  position: absolute;
+  bottom: 44%;
+  inset-inline: 1rem;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-shadow: 0 2px 10px rgb(20 10 40 / 65%);
+}
+
 .home-hero-links__social {
   position: absolute;
-  top: calc(50% + 4.5rem);
+  top: calc(59% + clamp(3.6rem, 6.6vw, 6rem) + 5.5rem);
   inset-inline: 1rem;
   display: flex;
   justify-content: center;
@@ -223,6 +238,32 @@ html[data-wallpaper-mode="banner"] body[data-current-page="home"] .home-hero-lin
 #main-grid .m3-profile__avatar-link .m3-avatar {
   width: 100%;
   border-radius: 50%;
+}
+
+#main-grid .m3-profile__avatar-link img[src="/assets/raiden/avatar.png"] {
+  /* The official portrait includes a generous transparent margin. */
+  transform: scale(2.32);
+}
+
+.m3-blog-postcard img[src*="/assets/raiden/"] {
+  /* ImageWrapper provides an inline default, so override only our artwork. */
+  object-position: center 25% !important;
+}
+
+#post-cover img[src*="/assets/raiden/"] {
+  object-position: center top !important;
+}
+
+.raiden-art-credit {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.9;
+  color: var(--on-surface-variant);
+}
+
+.raiden-art-credit a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 #main-grid .m3-profile__bio {
@@ -324,7 +365,11 @@ html.dark[data-wallpaper-mode="banner"] .post-card {
   }
 
   #banner-wrapper .banner-stage__copy--home h1 {
-    font-size: clamp(3rem, 10vw, 4.5rem);
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+  }
+
+  .home-hero-links__social {
+    top: calc(59% + clamp(3rem, 12vw, 5.4rem) + 5.5rem);
   }
 }
 
@@ -354,6 +399,34 @@ html.dark[data-wallpaper-mode="banner"] .post-card {
 
   #post-list .m3-blog-postcard__title {
     font-size: 1.2rem;
+  }
+}
+
+/* Keep the introduction and its links apart on short landscape screens. */
+@media (max-height: 650px) {
+  #banner-wrapper .banner-stage__copy--home {
+    inset-block-start: 38%;
+  }
+
+  #banner-wrapper .banner-stage__copy--home h1 {
+    font-size: clamp(2.25rem, 6vw, 3rem);
+  }
+
+  #banner-wrapper .banner-stage__copy--home p {
+    margin-top: 0.75rem;
+    min-height: 2rem;
+  }
+
+  .home-hero-links__eyebrow {
+    bottom: 67%;
+  }
+
+  .home-hero-links__social {
+    top: calc(38% + 7.75rem);
+  }
+
+  .home-hero-links__scroll {
+    bottom: 0.5rem;
   }
 }
 

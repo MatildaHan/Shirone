@@ -1,0 +1,20 @@
+{
+  "character": "雷电将军 / Raiden Shogun",
+  "game": "原神 / Genshin Impact",
+  "rights": "Artwork and character rights belong to HoYoverse / COGNOSPHERE. No ownership or additional license is claimed.",
+  "gallery": "https://wiki.hoyolab.com/pc/genshin/entry/49?lang=zh-cn",
+  "assets": [
+    {
+      "file": "sakura.webp",
+      "source": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/09/24/75248538/11c5e1925d0fa51bceec0c662f8bcccb_860093257457453195.png"
+    },
+    {
+      "file": "quiet.webp",
+      "source": "https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2025/06/26/75248538/a1be219fcaec8f7956a1d1ee10e6dee8_6662812702139289110.jpg"
+    },
+    {
+      "file": "avatar.png",
+      "source": "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/05/22/132746206/00e9f03e392e12d42510b18c6c616d36_8995725531620654076.png"
+    }
+  ]
+}

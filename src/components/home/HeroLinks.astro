@@ -11,7 +11,8 @@ const links = profileConfig.links.slice(0, 3);
 {siteConfig.banner.homeText.enable && (
   <div class="home-hero-links">
     <span class="home-hero-links__top-marker" aria-hidden="true"></span>
-    <nav class="home-hero-links__social" aria-label="社交链接与订阅">
+    <p class="home-hero-links__eyebrow">北冥的提瓦特手记 · 稻妻</p>
+    <nav class="home-hero-links__social" aria-label="提瓦特与手记订阅">
       {links.map((link) => (
         <a href={link.url} target="_blank" rel="me noopener noreferrer" aria-label={link.name} title={link.name}>
           <Icon name={link.icon} aria-hidden="true" />
@@ -20,11 +21,11 @@ const links = profileConfig.links.slice(0, 3);
       ))}
       <a href={url("/rss/")} aria-label="RSS 订阅" title="RSS 订阅">
         <Icon name="material-symbols:rss-feed-rounded" aria-hidden="true" />
-        <span>RSS</span>
+        <span>订阅手记</span>
       </a>
     </nav>
-    <a class="home-hero-links__scroll" href="#main-content-column" data-no-swup aria-label="向下浏览文章">
-      <span>向下探索</span>
+    <a class="home-hero-links__scroll" href="#main-content-column" data-no-swup aria-label="向下浏览手记">
+      <span>启程 · 阅读手记</span>
       <Icon name="material-symbols:keyboard-arrow-down-rounded" aria-hidden="true" />
     </a>
   </div>

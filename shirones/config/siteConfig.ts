@@ -12,8 +12,8 @@ import { withUserConfig } from "@/utils/config-overlay.ts";
 export const siteConfig: SiteConfig = withUserConfig("site", {
 	site: "https://shirone.mysqil.com/",
 	base: "/",
-	title: "Shirone",
-	subtitle: "A Material 3 anime blog",
+	title: "须臾之间",
+	subtitle: "寄蜉蝣于天地，渺沧海之一粟。",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
 		contentAlign: "center",
@@ -31,7 +31,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	// IANA time zone for precise post and moment timestamps. It is independent of lang.
 	timeZone: "Asia/Shanghai",
 	themeColor: {
-		hue: 315, // Default hue 0-360. 站点设计默认粉紫（偏二次元）；262 紫 / 345 粉 也可选
+		hue: 285, // 稻妻雷紫；访客仍可选择自己的主题色。
 		fixed: false, // Hide the theme color picker for visitors
 		// Dynamic Material 3 palette style (TonalSpot/Vibrant/Content/Expressive/Rainbow/FruitSalad/Monochrome/Neutral/Fidelity)
 		style: "tonalSpot",
@@ -57,26 +57,25 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		// desktop 用于 >= 1024px；mobile 仅用于 < 1024px 的首页，手机非首页不显示壁纸。
 		// 数组顺序就是轮播顺序；只需要静态 Banner 时，每组保留一张图片即可。
 		src: {
-			desktop: ["assets/images/banner/desktop/1.webp"],
-			mobile: ["assets/images/banner/mobile/1.webp"],
+			desktop: ["/assets/raiden/sakura.webp", "/assets/raiden/quiet.webp"],
+			mobile: ["/assets/raiden/sakura.webp", "/assets/raiden/quiet.webp"],
 		},
 		// 图片裁切焦点："top"、"center" 或 "bottom"。
-		position: "center",
+		position: "top",
 		dim: {
 			// 在图片上覆盖黑色遮罩以提高标题和顶部栏的对比度；opacity 范围为 0-1。
 			enable: true,
-			opacity: 0.32,
+			opacity: 0.48,
 		},
 		homeText: {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
-			title: "Shirone",
+			title: "须臾之间",
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+				"寄蜉蝣于天地，渺沧海之一粟。",
+				"于一心净土之外，珍藏人间的须臾。",
+				"雷光照见前路，樱落亦是永恒。",
+				"与影同行，把提瓦特的故事写进日常。",
 			],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
@@ -86,7 +85,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 				// 回退反向删除速度（每个字符间隔，毫秒）。
 				deleteSpeed: 50,
 				// 打字完成后停顿时间，单位为毫秒。
-				pauseTime: 2000,
+				pauseTime: 3500,
 				// 完成后是否循环播放；关闭表示只播放一次。
 				loop: true,
 			},
@@ -95,7 +94,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 			// 是否开启多张图片自动轮播；多张图片时生效，单张图片时自动降级为静态展示。
 			enable: true,
 			// 轮播切换间隔时间（毫秒），运行时最小值限制为 3000ms。
-			interval: 6000,
+			interval: 12000,
 			// 交叉淡入淡出（Crossfade）过渡时长（毫秒，默认 1200ms）。
 			fadeDuration: 1200,
 			// 运镜呼吸动画模式："ken-burns"（默认，循环运镜）| "zoom-in"（推进）| "zoom-out"（拉远）| "pan-left"（左移）| "pan-right"（右移）| "none"（无运镜）。
@@ -121,7 +120,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	},
 	favicon: [
 		// 浏览器标签页图标，路径相对于 public 目录。
-		{ src: "/logo/icon.webp" },
+		{ src: "/assets/raiden/avatar.png" },
 	],
 });
 
