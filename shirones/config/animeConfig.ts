@@ -14,7 +14,7 @@ import { withUserConfig } from "@/utils/config-overlay.ts";
  *
  * 遵循「零额外负担」原则与双平面模型（`docs/remote-data-system.md`）：
  * - 本地模式 (local)：完全离线，直接使用 `src/data/anime.ts`，零网络、零构建脚本负担；
- * - 快照模式 (snapshot)：读取构建期抓取清洗后的本地脱敏 JSON 快照（`shirones/config/data/anime-snapshots/`）；
+ * - 快照模式 (snapshot)：读取构建期抓取清洗后的本地脱敏 JSON 快照（`shirones/data/anime-snapshots/`）；
  * - 外部同步完全发生在显式 `pnpm anime:sync` 阶段，严禁页面运行时或默认构建时直接请求外部 API；
  * - 私密凭据（如 B站 SESSDATA）仅通过环境变量注入同步进程，绝不进入客户端代码与 Git 提交。
  *
@@ -86,7 +86,7 @@ export const animeConfig: AnimeConfig = withUserConfig("anime", {
 
 	/** 快照存储管理 */
 	snapshot: {
-		directory: "shirones/config/data/anime-snapshots",
+		directory: "shirones/data/anime-snapshots",
 		staleAfterDays: 30,
 		keepLastValid: true,
 	},
@@ -107,7 +107,7 @@ export function resolveAnimeOptions(config: AnimeConfig): ResolvedAnimeOptions {
 		config.snapshot.directory.trim() &&
 		!config.snapshot.directory.includes("..")
 			? config.snapshot.directory.trim().replace(/[\\/]+$/, "")
-			: "shirones/config/data/anime-snapshots";
+			: "shirones/data/anime-snapshots";
 
 	const staleAfterDays =
 		typeof config.snapshot?.staleAfterDays === "number" &&

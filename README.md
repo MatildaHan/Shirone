@@ -1,6 +1,6 @@
 # 须臾之间 · Shirone
 
-个人博客，基于 Astro、Svelte、TypeScript 和 `shirones` 主题。站点配置与文章保存在本仓库，界面通过本地布局和样式进行定制，维护时保留跟随主题升级的能力。
+个人博客，基于 Astro、Svelte、TypeScript 和 `shirones` 主题。本仓库维护站点配置与界面；文章、列表数据和内容媒体保存在独立的 [Shirone-content](https://github.com/MatildaHan/Shirone-content) 仓库。
 
 ## 本地运行
 
@@ -13,7 +13,9 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-开发服务默认地址为 `http://localhost:4321`，实际地址以终端输出为准。普通本地预览无需配置环境变量；启用需要凭据的功能时，参照 `.env.example` 设置本地 `.env`，不要提交凭据。示例中部分脚本来自上游模板，是否可用以本项目 `package.json` 为准。
+开发服务默认地址为 `http://localhost:4321`，实际地址以终端输出为准。启动和检查前会自动准备内容；首次运行需要 Git 和内容仓库的读取权限。未设置环境变量时使用 `shirone.content.json` 固定的内容提交，不自动跟随内容仓库 `main`。
+
+在本机写作，将 `CONTENT_DIR="../Shirone-content"` 写入不提交的 `.env`，然后在第二个终端运行 `pnpm content:watch`。当前内容源目录是 `/Users/matildahan/Blog/Shirone-content`。完整流程见[内容分离说明](docs/content-separation.md)，每个内容区的字段、操作和配置对应关系见[内容使用指南](https://github.com/MatildaHan/Shirone-content/blob/main/docs/content-guide.md)。
 
 ## 常用命令
 
@@ -24,6 +26,8 @@ pnpm dev
 | `pnpm astro check` | 检查 Astro 与 TypeScript 诊断 |
 | `pnpm build` | 构建站点，输出到 `dist/` |
 | `pnpm preview` | 预览已有构建结果，需先完成构建 |
+| `pnpm content:sync` | 将指定的本地内容或固定远端版本准备到构建镜像 |
+| `pnpm content:watch` | 监听内容源并同步保存后的改动，配合开发服务使用 |
 
 依赖调整与主题升级的操作见[维护指南](docs/maintenance.md#主题升级)。
 
@@ -32,17 +36,17 @@ pnpm dev
 | 路径 | 用途 |
 | --- | --- |
 | `shirones/config/` | 站点、导航、字体、评论及功能配置 |
-| `shirones/config/data/` | 友链、项目、时间线等配置数据 |
-| `shirones/content/posts/` | Markdown / MDX 文章，可使用文章目录存放配图 |
-| `shirones/content/moments/` | 瞬间内容 |
-| `shirones/content/series/` | 系列定义 |
-| `shirones/content/spec/` | 关于等独立内容 |
-| `shirones/content/snippets/` | Markdown 引用片段 |
+| `shirone.content.json` | 内容仓库地址及固定的 Git 提交版本 |
+| `scripts/content-sync.mjs` | 内容获取、镜像和冲突保护；不修改内容源 |
+| `../Shirone-content/` | 本机的内容源仓库，日常写作和素材管理入口 |
+| `.content-src/` | 未指定本地源时获取的固定版本缓存，不直接编辑 |
+| `shirones/data/`、`shirones/blocks/` | 自动准备的列表与作者/公告数据镜像，不提交、不直接编辑 |
+| `shirones/content/` | 自动准备的文章、瞬间、系列、关于与引用片段镜像，不直接编辑 |
 | `src/components/`、`src/layouts/` | 本地组件与布局定制 |
 | `src/styles/` | 本地样式，目前由 `personal-theme.css` 承载视觉定制 |
 | `src/assets/` | 源资源，例如字体；图片能否经过构建优化取决于使用方式 |
 | `src/content.config.ts` | 内容集合接入及本地转换，目前统一覆盖文章封面 |
-| `public/` | 原样发布的静态文件；例如 `/assets/raiden/sakura.webp` 对应此目录下文件 |
+| `public/` | 品牌图、favicon、logo 与界面音效留在本站；`images/` 及动漫/音乐/项目/瞬间媒体由内容仓库镜像，保持 URL |
 | `astro.config.mjs` | 主题集成与显式组件覆盖，目前注册本地 `MainGridLayout` 与中文标记版 `TimelineCard` |
 | `tsconfig.json` | 类型配置；现有 `@/`、`@components/` 等别名指向主题依赖内部 |
 
@@ -52,7 +56,8 @@ pnpm dev
 
 - [AI 工作与代码约定](AGENTS.md)：修改边界、协作方式及结果报告。
 - [维护指南](docs/maintenance.md)：内容与素材管理、主题升级、按影响验收、发布与恢复。
-- [相册数据说明](public/images/albums/README.md)和[相册目录规则](public/images/albums/AGENTS.md)：相册的局部约定；当前测试可用性见维护指南。
+- [内容分离说明](docs/content-separation.md)：两个仓库的职责、同步与版本更新流程。
+- [相册数据说明](https://github.com/MatildaHan/Shirone-content/blob/main/public/images/albums/README.md)和[相册目录规则](https://github.com/MatildaHan/Shirone-content/blob/main/public/images/albums/AGENTS.md)：相册的局部约定；当前测试可用性见维护指南。
 
 ## 文档维护
 

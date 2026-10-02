@@ -10,7 +10,7 @@
 
 ## 修改边界
 
-- 站点设置优先修改 `shirones/config/`，内容修改 `shirones/content/`，界面定制放在本地 `src/`。
+- 站点设置优先修改 `shirones/config/`，内容修改独立的 `Shirone-content` 仓库（本机为 `../Shirone-content/`），界面定制放在本地 `src/`。`shirones/content/`、`shirones/data/`、`shirones/blocks/` 和内容媒体是生成镜像，不直接编辑；同步与版本更新见[内容分离说明](docs/content-separation.md)。
 - 优先使用主题已有配置、同路径组件覆盖或 `astro.config.mjs` 的显式覆盖映射。不直接修改 `node_modules/` 或生成文件来实现功能。
 - 覆盖组件前核对主题原实现，保留仍被调用方使用的 Props、slot、DOM 标识和站内导航行为。现有 `@/`、`@components/`、`@utils/` 等别名指向主题内部，新增本地组件使用明确的本地导入路径。
 - 只修改当前任务需要的内容，不顺带重构、批量格式化、移动文件或清理示例。涉及内容与素材时遵循维护指南和局部规则。

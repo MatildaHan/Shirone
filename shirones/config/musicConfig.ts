@@ -1,4 +1,4 @@
-import { musicTracks } from "./data/music.ts";
+import { musicTracks } from "@/data/music.ts";
 import type {
 	MetingMusicConfig,
 	MusicConfig,

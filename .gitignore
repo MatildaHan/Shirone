@@ -10,6 +10,17 @@ dist/
 content.lock.json
 Shirone-Content/
 
+# mirrors prepared from Shirone-content; edit the content repository instead
+shirones/content/
+shirones/data/
+shirones/blocks/
+shirones/config/FooterConfig.html
+public/assets/anime/
+public/assets/music/
+public/assets/projects/
+public/assets/moments/
+public/images/
+
 # generated types
 .astro/
 
@@ -46,7 +57,7 @@ src/generated/local-icon-collections.ts
 *.iml
 
 # anime snapshot data & downloaded covers
-shirones/config/data/anime-snapshots/*.json
+shirones/data/anime-snapshots/*.json
 public/assets/anime/covers/*
 !public/assets/anime/covers/.gitkeep
 

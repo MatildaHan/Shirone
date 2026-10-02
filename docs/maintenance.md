@@ -4,6 +4,8 @@
 
 ## 内容与素材管理
 
+内容源已迁入独立的 [Shirone-content](https://github.com/MatildaHan/Shirone-content) 仓库，本机路径为 `../Shirone-content/`。下文的文章和内容素材操作均在内容源进行，主仓同路径文件是构建镜像。各区字段与配置关系见[内容使用指南](https://github.com/MatildaHan/Shirone-content/blob/main/docs/content-guide.md)，同步、冲突保护与版本更新见[内容分离说明](content-separation.md)。
+
 ### 内容格式与地址
 
 - 内容字段以 `src/content.config.ts` 接入的 `shirones/collections` schema 为准，先复用主题字段，不另建一套元数据规则。不同集合使用各自的 schema。
@@ -29,17 +31,17 @@ draft: true
 
 ### 素材与引用
 
-- 文章专用配图优先与文章放在同一目录并使用相对路径；站点公共静态资源放在 `public/` 并使用站点路径。需要构建优化的图片可放在 `src/assets/`，同时确认使用方式支持优化。
+- 文章专用配图优先与文章放在内容仓的同一目录并使用相对路径；内容公共静态资源放在内容仓 `public/` 并使用站点路径。品牌图、字体与界面音效保留主仓。需要新的 `src/assets/` 优化资源时先核对主题能力；当前同步范围不包含内容仓 `src/`。
 - 新素材使用能表达用途的文件名，上传前按实际展示尺寸压缩。不得随意重命名已被公开地址引用的素材。
 - 图片补充有意义的替代文字。新增外部素材在同目录的 `credits.json` 或说明文件中记录文件名、来源、作者或权利方、许可或授权情况；可参考 `public/assets/raiden/credits.json`。自制素材说明为自制，许可不明如实记录，不推定可自由分发。
 - 发布前检查内部链接、相对图片路径、站点资源路径与外部引用。检查构建后的页面，避免源文件路径正确而发布路径失效。
-- 相册字段与命名遵循[相册 README](../public/images/albums/README.md)及[目录规则](../public/images/albums/AGENTS.md)，这里不重复数据契约。
+- 相册字段与命名遵循内容仓的[相册 README](https://github.com/MatildaHan/Shirone-content/blob/main/public/images/albums/README.md)及[目录规则](https://github.com/MatildaHan/Shirone-content/blob/main/public/images/albums/AGENTS.md)，这里不重复数据契约。
 
 ## 主题升级
 
 主题升级与功能开发分开进行，便于比较和恢复。
 
-1. 查看工作区状态，记录当前可用版本与提交。先保存或备份未提交的配置、文章和定制，不用自动清理工作区来准备升级。
+1. 查看两个仓库的工作区状态，记录主仓提交和 `shirone.content.json` 的内容版本。先保存或备份未提交的配置、文章和定制，不用自动清理工作区来准备升级。
 2. 阅读目标版本的发布说明，核对 Node.js、pnpm、Astro、Svelte 的要求，以及配置字段、内容 schema 和覆盖接口的变化。明确目标版本后执行 `pnpm add shirones@<目标版本>`，其中占位符替换为实际版本，不盲目批量升级所有依赖。
 3. 检查 `package.json` 与锁文件差异。使用已安装版本的 `pnpm exec shirones info` 核对状态，参考 `node_modules/shirones/README.md` 和 `manifest.json` 确认可覆盖入口。不要把升级依赖与重新初始化模板混为一步。
 4. 逐项检查本地定制：`astro.config.mjs` 注册的 `MainGridLayout`、它使用的主题组件与工具函数、本地 `HeroLinks`、`personal-theme.css` 依赖的选择器和变量，以及内容封面转换。主题内部导入路径、Props、slot、DOM 标识或导航生命周期变化时，调整相应覆盖。
@@ -68,6 +70,8 @@ draft: true
 - 本次修改涉及的功能，例如图片、代码块、Markdown 扩展、评论或相册；未启用的无关功能无需为了验收开启。
 
 相册局部文档提到 `npx.cmd playwright test tests/site/albums.spec.ts`，但当前仓库没有该测试文件、对应测试脚本或 Playwright 依赖，该命令也采用 Windows 写法。本版保留局部规则；相册改动时记录该测试不可运行，执行构建并手动检查相册列表、详情和改动涉及的隐藏、受保护或外部相册。测试恢复后再执行真实可用的相册回归命令，不将缺失的测试计为通过，也不临时安装测试框架来满足旧说明。
+
+内容分离时发现两项既有素材缺口：游戏数据引用的 `assets/games/yihuan-hero.jpg`、`assets/games/minecraft-hero.jpg` 不存在；瞬间 `/images/moments/` 会生成缩略图候选地址，但当前 `public/assets/moments/thumbnails/` 只有占位文件，项目没有对应生成命令，候选加载失败也不会自动回退原图。迁移保留了原内容与素材，未在此任务补图或调整显示实现；相关维护时再处理，具体用法见内容使用指南。
 
 ## 发布与恢复原则
 
